@@ -9,4 +9,4 @@ Just do a google search of "julian cohen flag" and you will see the flag
 
 ![02](img/02.png)
 
-Flag is **flag{I_S3ARCH3D_HI6H_4ND_L0W_4ND_4LL_I_F0UND_W4S_TH1S_L0USY_FL4G}**
+Flag is **flag{f7da7636727524d8681ab0d2a072d663}**
