@@ -11,7 +11,7 @@ Alexander Taylor studied in University of South Florida. Its hacking club is cal
 
 > CSAW 2015 FUZYLL RECON PART 2 OF ?: TmljZSB3b3JrISBUaGUgbmV4dCBwYXJ0IGlzIGF0IC9jc2F3MjAxNS88bXkgc3VwZXIgc21hc2ggYnJvdGhlcnMgbWFpbj4uCg==
 
-Base64 decoding (![p2.php](p2.php)) that gives: 
+Base64 decoding ([p2.php](p2.php)) that gives: 
 
 > Nice work! The next part is at /csaw2015/\<my super smash brothers main\>.
 
@@ -46,7 +46,7 @@ console.log(c);
 
 This is just a simple xor encryption with the byte 4
 
-The string can be decrypted (![p4.html](p4.html)) by xoring the "encrypted" string with byte 4 again
+The string can be decrypted ([p4.html](p4.html)) by xoring the "encrypted" string with byte 4 again
 
 > The next stop on your quest is: /csaw2015/they_see_me_rollin
 
