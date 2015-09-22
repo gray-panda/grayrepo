@@ -15,5 +15,3 @@ Completed Writeups
 - Recon 100 : Julian Cohen
 - Recon 100 : Alexander Taylor (fuzyll)
 - Web 200 : Lawn Care Simulator
-
-![finalscore](finalscore.png)
