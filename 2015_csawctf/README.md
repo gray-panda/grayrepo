@@ -16,8 +16,4 @@ Completed Writeups
 - Recon 100 : Alexander Taylor (fuzyll)
 - Web 200 : Lawn Care Simulator
 
-<<<<<<< HEAD
 ![finalscore](finalscore.png)
-=======
-![finalscore](finalscore.png)
->>>>>>> 861fb1d... aa
