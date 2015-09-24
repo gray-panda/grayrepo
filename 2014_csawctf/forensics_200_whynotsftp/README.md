@@ -1,7 +1,7 @@
 ## CSAW CTF 2014
 # Forensics 200 : why not sftp?
 
-![question]{img/qn.png}
+![question](img/qn.png)
 
 You are provided with zip file which contains a pcap file
 

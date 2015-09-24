@@ -1,7 +1,7 @@
 ## CSAW CTF 2014
 # Forensics 100 : Dumpster Diving
 
-![question]{img/qn.png}
+![question](img/qn.png)
 
 You are provided with zip file which contains what seems like a core dump of a firefox process
 

@@ -1,7 +1,7 @@
 ## CSAW CTF 2014
 # Forensics 200 : obscurity
 
-![question]{img/qn.png}
+![question](img/qn.png)
 
 You are provided with a pdf file
 

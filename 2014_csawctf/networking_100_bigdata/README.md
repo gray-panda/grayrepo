@@ -1,7 +1,7 @@
 ## CSAW CTF 2014
 # Networking 100 : Big Data
 
-![question]{img/qn.png}
+![question](img/qn.png)
 
 You are provided with a huge pcap file
 
