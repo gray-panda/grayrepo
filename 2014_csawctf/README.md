@@ -10,4 +10,4 @@ Completed Writeups
 - Forensics 200 : why not sftp?
 - Forensics 200 : obscurity
 - Exploit 100 : bo
-- Exploit 200 : pybabies
+- Exploit 200 : pybabbies
