@@ -15,3 +15,8 @@ Completed Writeups
 - [Recon 100 : Julian Cohen](recon_100_juliancohen)
 - [Recon 100 : Alexander Taylor (fuzyll)](recon_100_alexandertaylor_fuzyll)
 - [Web 200 : Lawn Care Simulator](web_200_lawncaresimulator)
+
+After Party Writeups
+- [Exploit 100 : precision](exploit_100_precision)
+
+* After Party writeups are done on challenges after the CTF has ended. It is used to document my learning process and to share it to anyone who may be interested.
