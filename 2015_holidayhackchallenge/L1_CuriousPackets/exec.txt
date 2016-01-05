@@ -1,0 +1,82 @@
+iwconfig
+START_STATEwlan0     IEEE 802.11abgn  ESSID:"DosisHome-Guest"  
+          Mode:Managed  Frequency:2.412 GHz  Cell: 7A:B3:B6:5E:A4:3F   
+          Tx-Power=20 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Encryption key:off
+          Power Management:off
+          
+lo        no wireless extensions.
+
+eth0      no wireless extensions.
+STOP_STATEcat /tmp/iwlistscan.txt
+START_STATEwlan0     Scan completed :
+          Cell 01 - Address: 00:7F:28:35:9A:C7
+                    Channel:1
+                    Frequency:2.412 GHz (Channel 1)
+                    Quality=29/70  Signal level=-81 dBm  
+                    Encryption key:on
+                    ESSID:"CHC"
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s
+                    Bit Rates:24 Mb/s; 36 Mb/s; 48 Mb/s; 54 Mb/s
+                    Mode:Master
+                    Extra:tsf=000000412e67cddf
+                    Extra: Last beacon: 5408ms ago
+                    IE: Unknown: 00055837335A36
+                    IE: Unknown: 010882848B960C121824
+                    IE: Unknown: 030101
+                    IE: Unknown: 200100
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    IE: Unknown: 2A0100
+                    IE: Unknown: 32043048606C
+                    IE: Unknown: DD180050F2020101040003A4000027A4000042435E0062322F00
+                    IE: Unknown: 2D1A8C131BFFFF000000000000000000000000000000000000000000
+                    IE: Unknown: 3D1601080800000000000000000000000000000000000000
+                    IE: Unknown: DD0900037F01010000FF7F
+                    IE: Unknown: DD0A00037F04010000000000
+                    IE: Unknown: 0706555320010B1B
+          Cell 02 - Address: 48:5D:36:08:68:DC
+                    Channel:6
+                    Frequency:2.412 GHz (Channel 1)
+                    Quality=59/70  Signal level=-51 dBm  
+                    Encryption key:on
+                    ESSID:"DosisHome"
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 18 Mb/s
+                              24 Mb/s; 36 Mb/s; 54 Mb/s
+                    Bit Rates:6 Mb/s; 9 Mb/s; 12 Mb/s; 48 Mb/s
+                    Mode:Master
+                    Extra:tsf=00000021701d828b
+                    Extra: Last beacon: 4532ms ago
+                    IE: Unknown: 000F736F6D657468696E67636C65766572
+                    IE: Unknown: 010882848B962430486C
+                    IE: Unknown: 030106
+                    IE: Unknown: 0706555320010B1E
+                    IE: Unknown: 2A0100
+                    IE: Unknown: 2F0100
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+          Cell 03 - Address: 48:5D:36:08:68:DD
+                    Channel:6
+                    Frequency:2.412 GHz (Channel 1)
+                    Quality=62/70  Signal level=-49 dBm  
+                    Encryption key:off
+                    ESSID:"DosisHome-Guest"
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 18 Mb/s
+                              24 Mb/s; 36 Mb/s; 54 Mb/s
+                    Bit Rates:6 Mb/s; 9 Mb/s; 12 Mb/s; 48 Mb/s
+                    Mode:Master
+                    Extra:tsf=00000021701d8913
+                    Extra: Last beacon: 5936ms ago
+                    IE: Unknown: 000F736F6D657468696E67636C65766572
+                    IE: Unknown: 010882848B962430486C
+                    IE: Unknown: 030106
+                    IE: Unknown: 0706555320010B1E
+                    IE: Unknown: 2A0100
+                    IE: Unknown: 2F0100
+STOP_STATE

