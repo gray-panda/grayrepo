@@ -155,4 +155,4 @@ This function allows you to execute any command line commands through Javascript
 
 This method do require you to have access to a public facing IP or Domain where you can setup a nc listener
 
-For me, my ASUS router has a free DDNS service which I could use to get a public facing Domain. If anybody needs help on how to set this up, just pop me a message.
+For me, my router has a free DDNS service which I could use to get a public facing Domain. If anybody needs help on how to set this up, just pop me a message.
