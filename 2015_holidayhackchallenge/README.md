@@ -19,4 +19,12 @@ By doing it in order, an interesting story is revealed :)
 - [L5-1 Attribution_Email](L5_Attr1_Email)
 - [L5-2 Attribution_CorruptedPNG](L5_Attr2_PNG)
 
-I particularly enjoyed the [L4-5 GnomagePwnage_SG05](L4_Pwn_SG05) challenge. It is quite an interesting Binary Exploitation challenge. Take a look if that is your kind of thing
+I particularly enjoyed the [L4-5 GnomagePwnage_SG05](L4_Pwn_SG05) challenge. It is quite an interesting Binary Exploitation challenge. Take a look if that is your kind of thing.
+
+The result of the challenge is [here](https://holidayhackchallenge.com/winning-entry.html)
+
+I managed to get a "Super Honorable Mention" from SANS ( no t-shirt thou :( ). My many thanks to those who were involved for a very well put together challenge.
+
+The following is my official submission for the contest. It includes some additional storytelling (Read till the end :D)
+
+- [Submission](submission)
