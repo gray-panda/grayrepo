@@ -84,3 +84,5 @@ The correct keycode sequence is
 ![yayflag](img/06.png)
 
 The flag is **PAN{dis_C@1c's_Ju51_4_Y0UZ?!?}**
+
+Cool! :D
