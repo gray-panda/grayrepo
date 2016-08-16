@@ -1,0 +1,7 @@
+Just go to the address in soln.png and you will see the flag
+
+Go to Strings "The Flag is %s"
+X-Ref
+Scroll Up and see the string being created
+
+PAN{EZE_S41d_Th15_w4s_Ea5y}
