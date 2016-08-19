@@ -16,10 +16,14 @@ I've managed to complete the Windows, Mobile and Docs tier. Therefore, I will be
 **Mobile**
 - [Mob-1 LastChance](mob1_lastchance)
 - [Mob-2 Cups](mob2_cups)
-- Mob-3 Watt (Coming Soon)
+- [Mob-3 Watt](mob3_watt)
 - [Mob-4 Swip3r](mob4_swip3r)
 - [Mob-5 IoGA (Labyrinth Maze)](mob5_ioga)
 - [Mob-6 OGMob (Ti-86)](mob6_ogmob)
 
 **Docs**
-- Coming Soon
+- [Doc-1 BadMacro](doc1_badmacro)
+- [Doc-2 CrackDoc](doc2_crackdoc)
+- [Doc-3 PDF](doc3_pdf)
+- [Doc-4 Doc](doc4_doc)
+- [Doc-5 Calc](doc5_calc)

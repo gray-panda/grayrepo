@@ -1,0 +1,51 @@
+Attribute VB_Name = "UserForm1"
+Attribute VB_Base = "0{8AF7E01A-2331-4925-95C1-AA63132A39D5}{BF4AE4DE-16B1-4C4B-ABB6-3A501B9C5B0F}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Private Sub button_Click()
+    x = suchcrypto(key.Text, "General Vidal")
+    If x = "171,184,42,184,88,26,47,154,20,219,203,130,52,19,180,214,156,94,186,74,30,248,119,235,139,130,175,141,179,197,8,204,252," Then
+        MsgBox "Wow. Good Job! Such crack."
+    Else
+        MsgBox "U can do. Try harder..."
+    End If
+End Sub
+
+Function suchcrypto(sMessage, strKey)
+    Dim kLen, x, y, i, j, temp
+    Dim s(256), k(256)
+    kLen = Len(strKey)
+    For i = 0 To 255
+        s(i) = i
+        k(i) = Asc(Mid(strKey, (i Mod kLen) + 1, 1))
+    Next
+    j = 0
+    For i = 0 To 255
+        j = (j + k(i) + s(i)) Mod 256
+        temp = s(i)
+        s(i) = s(j)
+        s(j) = temp
+    Next
+    x = 0
+    y = 0
+    For i = 1 To 3072
+        x = (x + 1) Mod 256
+        y = (y + s(x)) Mod 256
+        temp = s(x)
+        s(x) = s(y)
+        s(y) = temp
+    Next
+    For i = 1 To Len(sMessage)
+        x = (x + 1) Mod 256
+        y = (y + s(x)) Mod 256
+        temp = s(x)
+        s(x) = s(y)
+        s(y) = temp
+ 
+        suchcrypto = suchcrypto & (s((s(x) + s(y)) Mod 256) Xor Asc(Mid(sMessage, i, 1))) & ","
+    Next
+End Function

