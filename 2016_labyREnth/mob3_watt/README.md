@@ -238,7 +238,7 @@ string @string = Encoding.UTF8.GetString(new byte[] { MainPage.varStore.varA[6] 
 
 From this, **@string** is the 7th byte of the variable "varStore.varA"
 
-with these information, we can conclude the following
+With these information, I concluded the following
 
 ```c#
 // i is "BAdPuzzl3r!?"
