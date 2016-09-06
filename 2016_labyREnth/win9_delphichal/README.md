@@ -89,7 +89,7 @@ Scroll down a little in the function and there is a bunch of 4 "GetText" and "St
 
 ![code1](img/15.png)
 
-These blobs are comparing the 4 values returned from "GetText" against the characters "P", "A", "N" and "{" respectively. Thus the first four characters of the flag is "PAN{"
+These blobs are comparing the 4 values returned from "GetText" against the characters "P", "A", "N" and "{" respectively. Thus this is where the flag is
 
 The code then grabs the next 2 characters with "GetText" and checks them with the following arithmetic functions
 
