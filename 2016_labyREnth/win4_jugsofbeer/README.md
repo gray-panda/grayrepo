@@ -33,11 +33,11 @@ Firstly, the length of the input is checked to be at least 0x20 (32) characters 
 
 ![lencheck](img/06.png)
 
-Next, each character of the input is AND-ed against 0xffff....cf . The result is then compared and has to be less than or equal to 2.
+Next, each character of the input is ADD-ed with 0xffff....cf. This is equivalent to a subtract 0x30 (48) operation. The result is then compared and has to be less than or equal to 2.
 
 ![charcheck](img/07.png)
 
-Testing this operation with a variety of characters reveals that it will only accept the characters '1', '2' and '3'. If there are any other characters, it will jump to the failure state. 
+This means that the only valid characters are '1', '2' and '3'. If there are any other characters, it will jump to the failure state. 
 
 Let's change our testing input to "12312312312312312312312312312312". 
 
