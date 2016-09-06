@@ -60,13 +60,13 @@ The IP of the destination server is shown. Follow the x-ref and it will lead to 
 
 ![sending](img/05.png)
 
-Also take not of the String "A wild debug message appeared". This String is shown when the binary is executed by itself
+Also take note of the String "A wild debug message appeared". This String is shown when the binary is executed by itself
 
 ![execute](img/06.png)
 
-This suggests plain running the binary by itself will not work as it cannot connect to the server ip
+This suggests that the debug message appeared because it was unable to connect to the server ip in our local run
 
-Do a x-ref on this function to see where it is being called. I renamed this function to "sendStuffs". This will bring us to the following code
+I renamed this function to "sendStuffs". Do a x-ref on this function to see where it is being called. This will bring us to the following code
 
 ![interesting](img/07.png)
 
@@ -78,7 +78,7 @@ I used a debugger (x32dbg/x64dbg) to step through the code to find out what thes
 
 ### Reversing the routines
 
-First of, the custom base64 is relatively simple. It uses the same base64 algorithm but changes the character dictionary. I reversed and reimplmented it into a pair of php functions
+The custom base64 is relatively simple. It uses the same base64 algorithm but changes the character dictionary. I reversed and reimplmented it into a pair of php functions
 
 ```php
 function customb64_decode($str){
