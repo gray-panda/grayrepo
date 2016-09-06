@@ -37,7 +37,7 @@ Ahha, there is a hidden sheet named "secret". Unhide it and look at it's content
 
 ![secret4](img/07.png)
 
-There is a bunch of strange function calls, one of which references a "supersecret" sheet. However, there is no such sheets visible.
+There is a bunch of strange function calls, one of which references a "supersecret" sheet. However, there is no such sheet visible.
 
 Apparently, Excel has a feature called [Very Hidden Sheets](http://www.excel-university.com/make-an-excel-worksheet-very-hidden/). To make a sheet very hidden or to unhide a very hidden sheet, one can only do it through the VB Code editor and not through the UI.
 

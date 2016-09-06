@@ -121,4 +121,4 @@ function crypto($msg, $key){
 }
 ```
 
-Straight up running the code reveals the flag **PAN{L4$t_Night_@f@iry_Vizited_M3}**
+Straight up running the script reveals the flag **PAN{L4$t_Night_@f@iry_Vizited_M3}**

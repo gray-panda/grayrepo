@@ -11,7 +11,15 @@ Do note all challenge zip files provided are password protected (pw is "infected
 I've managed to complete the Windows, Mobile and Docs tier. Therefore, I will be uploading writeups for all the challenges in these 3 tiers. Writeups for other tiers may also be uploaded if I have time to write them :)
 
 **Windows**
-- Coming Soon
+- [Win-1 AntiD](win1_antid)
+- [Win-2 BabbySay](win2_babbysays)
+- [Win-3 Squirtle](win3_squirtle)
+- [Win-4 JugsOfBeer](win4_jugsofbeer)
+- [Win-5 RGB](win5_rgb)
+- [Win-6 Shellcode](win6_shellcode)
+- [Win-7 PCAP](win7_pcap)
+- [Win-8 RevHunt](win8_revhunt)
+- [Win-9 DelphiChallenge](win9_delphichal)
 
 **Mobile**
 - [Mob-1 LastChance](mob1_lastchance)

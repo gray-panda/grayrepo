@@ -127,7 +127,7 @@ End Function
 
 The **checkValue** function performs 2 single byte xor of the input with "U8pblvDZuAh8GY.HelpContextId" and "U8pblvDZuAh8GY.ScrollHeight". The result is then compared to "U8pblvDZuAh8GY.Label1.Caption". This means "U8pblvDZuAh8GY.Label1.Caption" contains the encoded version of the procedure name that the **findSpecificProcedure** function was looking for.
 
-Look back at the **checkStuff** function. After this procedure name is found, the **allsCallsXorAndCompare** function is called
+Look back at the **checkStuff** function. After this procedure name is found, the **callsCallsXorAndCompare** function is called
 
 ```vb
 Private Sub callsCallsXorAndCompare(m4dYL, fviLw9) // UxKo3LivfGHxI2OtWa3KtqOgY6cRb5yrbR00
@@ -193,7 +193,7 @@ Right-click the doc file and open it in a text editor. I used Notepad++. Look fo
 
 ![before](img/05.png)
 
-The value here is actually the hashed password that is protecting the files. Change the filed name to something else (e.g. "AAA") and save the file.
+The value here is actually the hashed password that is protecting the files. Change the field name to something else (e.g. "AAA") and save the file.
 
 ![after](img/06.png)
 
@@ -209,7 +209,7 @@ Do note that you still can't see the actual source code of any of the components
 
 ![form2](img/09.png)
 
-We can now see that those values referenced in the code are actually attributes of the form. Let's copy them all down.
+We can now see that those values referenced in the code are actually attributes of the form. Let's copy them down.
 
 ```
 U8pblvDZuAh8GY.Label1.Caption = "xRgWTqWr7ipEjFBfESrOiaYFu9i9Jml3Q171"
