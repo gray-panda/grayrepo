@@ -198,4 +198,4 @@ Enter the 6 shares and the flag will be revealed
 
 ![flag](img/08.png)
 
-The flag is **Shamir_1s_C0nfused@flare-on.com**
+The flag is `Shamir_1s_C0nfused@flare-on.com`

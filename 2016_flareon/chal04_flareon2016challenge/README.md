@@ -160,5 +160,5 @@ Running the script will play the Imperial March and reveal the flag.
 
 ![flag](img/12.png)
 
-The flag is **f0ll0w_t3h_3xp0rts@flare-on.com**
+The flag is `f0ll0w_t3h_3xp0rts@flare-on.com`
 

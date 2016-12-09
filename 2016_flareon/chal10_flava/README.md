@@ -438,4 +438,4 @@ Running it will reveal the flag
 
 ![flag](img/33.png)
 
-The flag is **angl3rcan7ev3nprim3@flare-on.com**
+The flag is `angl3rcan7ev3nprim3@flare-on.com`

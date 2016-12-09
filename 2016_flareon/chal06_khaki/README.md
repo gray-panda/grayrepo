@@ -114,5 +114,5 @@ Running the script will reveal the flag
 
 ![flag](img/16.png)
 
-The flag is **1mp0rt3d_pygu3ss3r@flare-on.com**
+The flag is `1mp0rt3d_pygu3ss3r@flare-on.com`
 

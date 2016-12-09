@@ -153,5 +153,5 @@ Opening it in a image viewer will reveal the flag
 
 ![flag](decrypted.jpg)
 
-The flag is **cl0se_t3h_f1le_0n_th1s_0ne@flare-on.com**
+The flag is `cl0se_t3h_f1le_0n_th1s_0ne@flare-on.com`
 

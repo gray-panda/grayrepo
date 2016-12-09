@@ -125,5 +125,5 @@ The flag is revealed when the correct password ("kYwxCbJoLp") is entered
 
 ![flag](img/08.png)
 
-The flag is **A_p0p_pu$H_&_a_Jmp@flare-on.com**
+The flag is `A_p0p_pu$H_&_a_Jmp@flare-on.com`
 

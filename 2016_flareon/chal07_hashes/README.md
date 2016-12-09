@@ -211,4 +211,4 @@ The results in order are
 cc720842d0884da08e26d9fccb24bc9c27bd254e:on.com
 ```
 
-The flag is **h4sh3d_th3_h4sh3s@flare-on.com**
+The flag is `h4sh3d_th3_h4sh3s@flare-on.com`

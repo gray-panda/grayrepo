@@ -105,5 +105,5 @@ Running the full [brute force script](soln.php) this time produces the flag
 
 ![flag](img/09.png)
 
-The flag is **Ohs0pec1alpwd@flare-on.com**
+The flag is `Ohs0pec1alpwd@flare-on.com`
 

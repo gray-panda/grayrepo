@@ -207,4 +207,4 @@ Running it will reveal the flag
 
 ![flag](img/13.png)
 
-The flag is **retr0_hack1ng@flare-on.com**
+The flag is `retr0_hack1ng@flare-on.com`
