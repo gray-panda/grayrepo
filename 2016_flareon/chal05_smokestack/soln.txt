@@ -1,0 +1,381 @@
+input[0-9] is first pushed to the stack
+Instruction will run until index hits 0x182
+
+Index		Instructions	Meaning
+[0,1]		00 00 21 00 	Push 0x21
+[2]			02 00 			Pop 2, Add, Push
+[3,4]		00 00 91 00 	Push 0x91
+[5]			08 00 			Pop 2, IsEqual, Push 0 or 1 (1 if equal)		[input[9] = 0x91-0x21 = 0x70 (p)]
+[6,7]		00 00 16 00		Push 0x16
+[8,9]		00 00 0C 00 	Push 0x0c
+[a]			09 00 			pop 3 = [x,y,z], if (x) push z; else push y		[correct should be push 0xc]
+[b]			0A 00 			Pop into instruction index						[correct case should be IIndex = 0x0c]
+[c,d]		0B 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Push ReturnValue					[ReturnValue should be 0]
+[e,f]		00 00 0C 00		Push 0x0c
+[10]		02 00 			Pop 2, Add, Push								[Pushed 0x0c + 0 = 0x0c]
+[11,12]		0C 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Pop into ReturnValue				[ReturnValue = 0x0c]
+[13,14]		00 00 1D 00 	Push 0x1d
+[15]		0A 00 			Pop into instruction index						[IIndex = 0x1d]
+
+[16,17] 	0B 00 00 00		Skipped
+[18,19]		00 00 63 00 	Skipped
+[1a,1b] 	02 00 0C 00 	Skipped
+[1c] 		00 00 			Skipped
+
+[1d,1e] 	00 00 18 00 	Push 0x18
+[1f]		06 00 			Pop 2, Xor, Push
+[20,21]		00 00 54 00 	Push 0x54
+[22]		08 00 			Pop 2 , IsEqual, Push 0 or 1 (1 if equal)		[input[8] = 0x54 ^ 0x18 = 0x4c (L)]
+[23,24]		00 00 33 00 	Push 0x33
+[25,26]		00 00 29 00 	Push 0x29
+[27]		09 00			pop 3 = [x,y,z], if (x) push z; else push y		[correct should be push 0x29]
+[28]		0A 00 			Pop into instruction index						[correct case should be IIndex = 0x29]
+[29,2a]		0B 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Push ReturnValue					[ReturnValue should be 0x0c]
+[2b,2c]		00 00 2C 00 	Push 0x2c
+[2d]		02 00 			Pop 2, Add, Push								[Pushed 0x2c + 0x0c = 0x38]
+[2e,2f]		0C 00 00 00		Switch 2nd Word (0)
+								Case 0 : Pop into ReturnValue				[ReturnValue = 0x38]
+[30,31]		00 00 3D 00 	Push 0x3d
+[32]		0A 00 			Pop into instruction index						[IIndex = 0x3d]
+
+[33,34]		00 00 0E 00 	Skipped
+[35,36]		01 00 0B 00 	Skipped
+[37,38]		00 00 00 00 	Skipped
+[39,3a]		59 00 02 00 	Skipped
+[3b,3c]		0C 00 00 00 	Skipped
+
+[3d,3e]		0B 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Push ReturnValue					[Pushed ReturnValue which is 0x38] [Saving the ReturnValue
+[3f,40]		00 00 00 00 	Push 0x00
+[41,42]		0C 00 01 00 	Switch 2nd Word (1)
+								Case 1 : Pop into TmpValue					[TmpValue = 0x00]
+[43,44]		00 00 09 00 	Push 0x09
+[45,46]		0C 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Pop into ReturnValue				[ReturnValue = 0x09]
+[47,48]		0B 00 01 00 	Switch 2nd Word (1)
+								Case 1 : Push TmpValue						[Pushed TmpValue which is 0x00]
+[49,4a]		00 00 02 00 	Push 0x02
+[4b]		02 00 			Pop 2, Add, Push								[Pushed 0x02 + 0x00 = 0x02]
+[4c,4d]		0C 00 01 00 	Switch 2nd Word (1)
+								Case 1 : Pop into TmpValue					[TmpValue = 0x02]
+[4e,4f]		0B 00 00 00		Switch 2nd Word (0)
+								Case 0 : Push ReturnValue					[Pushed ReturnValue which is 0x09]
+[50,51]		00 00 01 00 	Push 0x01
+[52]		03 00 			Pop 2, Sub, Push								[Pushed 0x09-0x01 = 0x08]
+[53,54]		0C 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Pop into ReturnValue				[ReturnValue = 0x08]
+[55,56]		0B 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Push ReturnValue					[Pushed ReturnValue which is 0x08]
+[57,58]		00 00 00 00 	Push 0x00
+[59]		08 00 			Pop 2, IsEqual, Push 0 or 1 (1 if equal)		[0x00 == 0x08 ? correct should be pushed 0x00]
+[5a,5b]		00 00 47 00 	Push 0x47
+[5c,5d]		00 00 60 00 	Push 0x60
+[5e]		09 00 			pop 3 = [x,y,z], if (x) push z; else push y		[Pushes either 0x47 (Loop Continues) or 0x60 (Loop End)]
+[5f]		0A 00			Pop into instruction index						[Loop occurs here back to 0x47. Loop ends will go to 0x60]
+
+--- 
+Above loop loops 0x09 times.
+Each Iteration increases TmpValue by 0x02
+Therefore, it sets TmpValue to 0x12 and ReturnValue to 0x00
+Top of stack at end of loop is 0x38 which was saved before the loop 
+---
+
+[60,61]		0C 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Pop into ReturnValue				[ReturnValue = 0x38]
+[62,63]		0B 00 01 00 	Switch 2nd Word (1)
+								Case 1 : Push TmpValue						[Pushed TmpValue which is 0x12]
+[64]		03 00 			Pop 2, Sub, Push								
+[65,66]		00 00 5D 00 	Push 0x5d
+[67]		08 00			Pop 2 , IsEqual, Push 0 or 1 (1 if equal)		[input[7] = 0x5d + 0x12 = 0x6f (o)]
+[68,69]		00 00 7C 00 	Push 0x7c
+[6a,6b]		00 00 6E 00 	Push 0x6e
+[6c]		09 00 			pop 3 = [x,y,z], if (x) push z; else push y		[correct should be push 0x6e]
+[6d]		0A 00 			Pop into instruction index						[IIndex = 0x6e]
+
+[6e,6f]		0B 00 00 00		Switch 2nd Word (0)
+								Case 0 : Push ReturnValue					[Pushed ReturnValue which is 0x38]
+[70,71]		00 00 07 00 	Push 0x07
+[72]		03 00 			Pop 2, Sub, Push								[Pushed 0x38-0x07 = 0x31]
+[73,74]		0C 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Pop into ReturnValue				[ReturnValue = 0x31]
+[75,76]		00 00 5B 00 	Push 0x5b
+[77,78]		0C 00 01 00 	Switch 2nd Word (1)
+								Case 1 : Pop into TmpValue					[TmpValue = 0x5b]
+[79,7a]		00 00 87 00 	Push 0x87
+[7b]		0A 00 			Pop into instruction index						[IIndex = 0x87]
+
+[7c,7d]		00 00 36 00 	Skipped
+[7e,7f]		0C 00 01 00		Skipped
+[80,81]		0B 00 00 00 	Skipped
+[82,83]		0B 00 01 00 	Skipped
+[84,85]		02 00 0C 00 	Skipped
+[86]		01 00 			Skipped
+
+[87,88]		0B 00 01 00 	Switch 2nd Word (1)
+								Case 1 : Push TmpValue						[Pushed TmpValue which is 0x5b]
+[89,8a]		00 00 58 00 	Push 0x58
+[8b]		02 00 			Pop 2, Add, Push								[Pushed 0x58+0x5b = 0xb3]
+[8c]		06 00 			Pop 2, Xor, Push
+[8d,8e]		00 00 F9 00 	Push 0xf9
+[8f]		08 00 			Pop 2 , IsEqual, Push 0 or 1 (1 if equal)		[input[6] = 0xf9 ^ 0xb3 = 0x4a (J)]
+[90,91]		00 00 A0 00 	Push 0xa0
+[92,93]		00 00 96 00 	Push 0x96
+[94]		09 00 			pop 3 = [x,y,z], if (x) push z; else push y		[correct should be push 0x96]
+[95]		0A 00 			Pop into instruction index						[IIndex = 0x96]
+[96,97]		0B 00 00 00		Switch 2nd Word (0)
+								Case 0 : Push ReturnValue					[Pushed ReturnValue which is 0x31]
+[98,99]		00 00 4D 00 	Push 0x4d
+[9a]		06 00 			Pop 2, Xor, Push								[Pushed 0x4d ^ 0x31 = 0x7c]
+[9b,9c]		0C 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Pop into ReturnValue				[ReturnValue = 0x7c]
+[9d,9e]		00 00 AE 00 	Push 0xae
+[9f]		0A 00			Pop into instruction index						[IIndex = 0xae]
+
+[a0,a1]		00 00 23 03 	Skipped
+[a2,a3]		00 00 2B 01 	Skipped
+[a4,a5]		03 00 0C 00 	Skipped
+[a6,a7]		01 00 0B 00 	Skipped
+[a8,a9]		00 00 0B 00 	Skipped
+[aa,ab]		01 00 02 00 	Skipped
+[ac,ad]		0C 00 01 00 	Skipped
+
+[ae,af]		0C 00 01 00		Switch 2nd Word (1)
+								Case 1 : Pop into TmpValue					[TmpValue = input[5]]
+[b0,b1]		0B 00 01 00 	Switch 2nd Word (1)
+								Case 1 : Push TmpValue						[Pushed input[5]]
+[b2,b3]		0B 00 01 00 	Switch 2nd Word (1)
+								Case 1 : Push TmpValue						[Pushed TmpValue which is input[5]]
+[b4,b5]		00 00 01 00 	Push 0x01
+[b6]		03 00 			Pop 2, Sub, Push								[Pushed input[5] - 0x01]
+[b7,b8]		0C 00 01 00 	Switch 2nd Word (1)
+								Case 1 : Pop into TmpValue					[TmpValue = (input[5]-0x01)]
+[b9,ba]		00 00 03 00 	Push 0x03
+[bb]		02 00 			Pop 2, Add, Push								[Pushed input[5] + 0x03]
+[bc,bd]		0B 00 01 00 	Switch 2nd Word (1)
+								Case 1 : Push TmpValue						[Pushed (input[5]-0x01)]
+[be,bf]		00 00 00 00		Push 0x00
+[c0]		08 00 			Pop 2 , IsEqual, Push 0 or 1 (1 if equal)		[Looping]
+[c1,c2]		00 00 B2 00 	Push 0xb2
+[c3,c4]		00 00 C7 00 	Push 0xc7
+[c5]		09 00 			pop 3 = [x,y,z], if (x) push z; else push y		[Pushes either 0xb2 (Loop Continues) or 0xc7 (Loop End)]
+[c6]		0A 00 			Pop into instruction index						[Loop occurs here back to 0xb2. Loop ends will go to 0xc7]
+
+---
+Above Loop sets TmpValue to input[5]
+It will iterate for input[5] times
+Each iteration will increase TmpValue by 0x03
+Therefore, at the end of the loop, TmpValue = 0, Top of Stack = input[5] + (3*input[5]) = 4*input[5]
+---
+
+[c7]		07 00 			Pop 1, Not, Push
+[c8,c9]		00 00 77 FE 	Push 0xfe77
+[ca]		08 00 			Pop 2 , IsEqual, Push 0 or 1 (1 if equal)		[Let input[5] be x, x+3x = (!0xfe77), (!0xfe77) = 0x0188, x = 0x188/4 = 0x62 (b)]
+[cb,cc]		00 00 D8 00 	Push 0xd8
+[cd,ce]		00 00 D1 00 	Push 0xd1
+[cf]		09 00 			pop 3 = [x,y,z], if (x) push z; else push y		[correct should be push 0xd1]
+[d0]		0A 00 			Pop into instruction index						[IIndex = 0xd1]
+
+[d1,d2]		0B 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Push ReturnValue					[Pushed ReturnValue which is 0x7c]
+[d3,d4]		00 00 58 00 	Push 0x58
+[d5]		02 00 			Pop 2, Add, Push								[Pushed 0x58 + 0x7c = 0xd4]
+[d6,d7]		0C 00 00 00		Switch 2nd Word (0)
+								Case 0 : Pop into ReturnValue				[ReturnValue = 0xd4]
+							
+[d8,d9]		00 00 03 00 	Push 0x03
+[da]		04 00 			Pop 2, Rotate-Right, Push						[input[4] ROR 3]
+[db,dc]		00 00 8C 00 	Push 0x8c
+[dd]		02 00 			Pop 2, Add, Push								[(input[4] ROR 3) + 0x8c]
+[de,df]		00 00 94 60		Push 0x6094
+[e0]		08 00 			Pop 2 , IsEqual, Push 0 or 1 (1 if equal)		[0x6094 - 0x8c = 0x6008, 0x6008 ROL 3 = 0x43 = input[4] (C)]
+[e1,e2]		00 00 EE 00 	Push 0xee
+[e3,e4]		00 00 E7 00 	Push 0xe7
+[e5]		09 00 			pop 3 = [x,y,z], if (x) push z; else push y		[correct should be push 0xe7]
+[e6]		0A 00 			Pop into instruction index						[IIndex = 0xe7]
+
+[e7,e8]		0B 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Push ReturnValue					[Pushed ReturnValue which is 0xd4]
+[e9,ea]		00 00 E7 00 	Push 0xe7
+[eb]		02 00 			Pop 2, Add, Push								[Pushed 0xe7 + 0xd4 = 0x1bb]
+[ec,ed]		0C 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Pop into ReturnValue				[ReturnValue = 0x1bb]
+							
+[ee,ef]		0B 00 01 00 	Switch 2nd Word (1)
+								Case 1 : Push TmpValue						[Pushed TmpValue which is 0x00]
+[f0]		02 00 			Pop 2, Add, Push								[input[3] + 0]
+[f1,f2]		00 00 0C 00 	Push 0x0c
+[f3]		06 00 			Pop 2, Xor, Push								[input[3] ^ 0x0c]
+[f4,f5]		00 00 74 00 	Push 0x74
+[f6]		08 00 			Pop 2 , IsEqual, Push 0 or 1 (1 if equal)		[input[3] = 0x74 ^ 0x0c = 0x78 (x)]
+[f7,f8]		00 00 07 01 	Push 0x107
+[f9,fa]		00 00 FD 00 	Push 0xfd
+[fb]		09 00 			pop 3 = [x,y,z], if (x) push z; else push y		[correct should be push 0xfd]
+[fc]		0A 00 			Pop into instruction index						[IIndex = 0xfd]
+
+[fd,fe]		0B 00 00 00		Switch 2nd Word (0)
+								Case 0 : Push ReturnValue					[Pushed ReturnValue which is 0x1bb]
+[ff,100]	00 00 09 00		Push 0x09
+[101]		03 00 			Pop 2, Sub, Push								[Pushed 0x1bb - 0x09 = 0x1b2]
+[102,103]	0C 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Pop into ReturnValue				[ReturnValue = 0x1b2]
+							
+[104,105]	00 00 1D 01 	Push 0x11d
+[106]		0A 00 			Pop into instruction index						[IIndex = 0x11d]
+
+[107,108]	00 00 0A 00 	Skipped
+[109,10a]	0C 00 01 00 	Skipped
+[10b,10c]	0B 00 01 00 	Skipped
+[10d,10e]	00 00 01 00 	Skipped
+[10f,110]	03 00 0C 00 	Skipped
+[111,112]	01 00 0B 00 	Skipped
+[113,114]	01 00 00 00 	Skipped
+[115,116]	00 00 08 00 	Skipped
+[117,118]	00 00 0B 01 	Skipped
+[119,11a]	00 00 1D 01 	Skipped
+[11b,11c]	09 00 0A 00 	Skipped
+
+[11d,11e]	00 00 06 00 	Push 0x06
+[11f]		05 00			Pop 2, Rotate-Left, Push						[input[2] ROL 6]
+[120,121]	00 00 C0 1D 	Push 0x1dc0
+[122]		08 00 			Pop 2 , IsEqual, Push 0 or 1 (1 if equal)		[input[2] = 0x1dc0 ROR 6 = 0x77 (w)]
+[123,124]	00 00 33 01 	Push 0x133
+[125,126]	00 00 29 01 	Push 0x129
+[127]		09 00 			pop 3 = [x,y,z], if (x) push z; else push y		[correct should be push 0x129]
+[128]		0A 00 			Pop into instruction index						[IIndex = 0x129]
+
+[129,12a]	0B 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Push ReturnValue					[Pushed ReturnValue which is 0x1b2]
+[12b,12c]	00 00 71 00 	Push 0x71
+[12d]		02 00 			Pop 2, Add, Push								[Pushed 0x71 + 0x1b2 = 0x223]
+[12e,12f]	0C 00 00 00		Switch 2nd Word (0)
+								Case 0 : Pop into ReturnValue				[ReturnValue = 0x223]					
+[130,131]	00 00 3D 01 	Push 0x13d
+[132]		0A 00 			Pop into instruction index						[IIndex = 0x13d]
+
+[133,134]	0B 00 00 00 	Skipped
+[135,136]	00 00 77 00 	Skipped
+[137,138]	02 00 0C 00 	Skipped
+[139,13a]	00 00 00 00 	Skipped
+[13b,13c]	3D 01 0A 00 	Skipped
+
+[13d,13e]	00 00 16 00 	Push 0x16
+[13f]		02 00 			Pop 2, Add, Push								[input[1] + 0x16]
+[140,141]	00 00 0E 00 	Push 0x0e
+[142]		03 00 			Pop 2, Sub, Push								[input[1] + 0x08]
+[143,144]	00 00 61 00 	Push 0x61
+[145]		08 00 			Pop 2 , IsEqual, Push 0 or 1 (1 if equal)		[input[1] = 0x61 - 0x08 = 0x59 (Y)]
+[146,147]	00 00 53 01		Push 0x153
+[148,149]	00 00 4C 01 	Push 0x14c
+[14a]		09 00 			pop 3 = [x,y,z], if (x) push z; else push y		[correct should be push 0x14c]
+[14b]		0A 00 			Pop into instruction index						[IIndex = 0x14c]
+
+[14c,14d]	0B 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Push ReturnValue					[Pushed ReturnValue which is 0x223]
+[14e,14f]	00 00 2C 00		Push 0x2c
+[150]		03 00 			Pop 2, Sub, Push								[Pushed 0x223 - 0x2c = 0x1f7]
+[151,152]	0C 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Pop into ReturnValue				[ReturnValue = 0x1f7]
+								
+								
+[153,154]	0C 00 01 00 	Switch 2nd Word (1)
+								Case 1 : Pop into TmpValue					[TmpValue = (input[0]]
+[155,156]	0B 00 01 00 	Switch 2nd Word (1)
+								Case 1 : Push TmpValue						[Pushed TmpValue which is input[0]]
+[157,158]	00 00 2C 21 	Push 0x212c
+[159,15a]	0B 00 01 00 	Switch 2nd Word (1)
+								Case 1 : Push TmpValue						[Pushed TmpValue which starts as input[0]]
+[15b,15c]	00 00 01 00 	Push 0x01
+[15d]		03 00 			Pop 2, Sub, Push								
+[15e,15f]	0C 00 01 00		Switch 2nd Word (1)
+								Case 1 : Pop into TmpValue					[TmpValue = TmpValue - 1]
+[160,161]	00 00 07 00 	Push 0x07
+[162]		03 00 			Pop 2, Sub, Push
+[163,164]	0B 00 01 00 	Switch 2nd Word (1)
+								Case 1 : Push TmpValue						[TmpValue starts from input[0] and goes towards 0x00]
+[165,166]	00 00 00 00 	Push 0x00
+[167]		08 00			Pop 2 , IsEqual, Push 0 or 1 (1 if equal)		[Looping condition]
+[168,169]	00 00 59 01 	Push 0x159
+[16a,16b]	00 00 6E 01 	Push 0x16e
+[16c]		09 00 			pop 3 = [x,y,z], if (x) push z; else push y		[Pushes either 0x159 (Loop Continues) or 0x16e (Loop End)]
+[16d]		0A 00 			Pop into instruction index						[Loop occurs here back to 0x159. Loop ends will go to 0x16e]
+
+---
+Above Loop sets TmpValue to input[0] first
+It will iterate for input[0] times
+Each iteration will will subtract 0x07 from 0x212c
+Therefore, at the end of the loop, TmpValue = 0, Top of Stack = 0x212c - (7*input[0])
+---
+
+[16e,16f]	00 00 CA 01		Push 0x1ca
+[170]		06 00 			Pop 2, Xor, Push								[(0x212c - (7*input[0])) ^ 0x1ca]
+[171,172]	00 00 F5 1F 	Push 0x1ff5
+[173]		08 00 			Pop 2 , IsEqual, Push 0 or 1 (1 if equal)		[Let input[0] be x, (0x212c-7x)^0x1ca = 0x1ff5, 7x = 0x2ed, x = 0x6b (k)]
+[174,175]	00 00 81 01 	Push 0x181
+[176,177]	00 00 7A 01		Push 0x17a
+[178]		09 00 			pop 3 = [x,y,z], if (x) push z; else push y		[correct should be push 0x17a]
+[179]		0A 00 			Pop into instruction index						[IIndex = 0x17a]
+[17a,17b]	0B 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Push ReturnValue					[Pushed ReturnValue which is 0x1f7]
+[17c,17d]	00 00 12 00 	Push 0x12
+[17e]		02 00 			Pop 2, Add, Push								[Pushed 0x12 + 0x1f7 = 0x209]
+[17f,180]	0C 00 00 00 	Switch 2nd Word (0)
+								Case 0 : Pop into ReturnValue				[ReturnValue = 0x209]
+[181]		0D 00 			Nop
+[182]		Instruction ENDS
+
+0040A140  00 00 21 00 02 00 00 00 91 00 08 00 00 00 16 00  ..!.............
+0040A150  00 00 0C 00 09 00 0A 00 0B 00 00 00 00 00 0C 00  ................
+0040A160  02 00 0C 00 00 00 00 00 1D 00 0A 00 0B 00 00 00  ................
+0040A170  00 00 63 00 02 00 0C 00 00 00 00 00 18 00 06 00  ..c.............
+0040A180  00 00 54 00 08 00 00 00 33 00 00 00 29 00 09 00  ..T.....3...)...
+0040A190  0A 00 0B 00 00 00 00 00 2C 00 02 00 0C 00 00 00  ........,.......
+0040A1A0  00 00 3D 00 0A 00 00 00 0E 00 01 00 0B 00 00 00  ..=.............
+0040A1B0  00 00 59 00 02 00 0C 00 00 00 0B 00 00 00 00 00  ..Y.............
+0040A1C0  00 00 0C 00 01 00 00 00 09 00 0C 00 00 00 0B 00  ................
+0040A1D0  01 00 00 00 02 00 02 00 0C 00 01 00 0B 00 00 00  ................
+0040A1E0  00 00 01 00 03 00 0C 00 00 00 0B 00 00 00 00 00  ................
+0040A1F0  00 00 08 00 00 00 47 00 00 00 60 00 09 00 0A 00  ......G...`.....
+0040A200  0C 00 00 00 0B 00 01 00 03 00 00 00 5D 00 08 00  ............]...
+0040A210  00 00 7C 00 00 00 6E 00 09 00 0A 00 0B 00 00 00  ..|...n.........
+0040A220  00 00 07 00 03 00 0C 00 00 00 00 00 5B 00 0C 00  ............[...
+0040A230  01 00 00 00 87 00 0A 00 00 00 36 00 0C 00 01 00  ..........6.....
+0040A240  0B 00 00 00 0B 00 01 00 02 00 0C 00 01 00 0B 00  ................
+0040A250  01 00 00 00 58 00 02 00 06 00 00 00 F9 00 08 00  ....X.......ù...
+0040A260  00 00 A0 00 00 00 96 00 09 00 0A 00 0B 00 00 00  .. .............
+0040A270  00 00 4D 00 06 00 0C 00 00 00 00 00 AE 00 0A 00  ..M.........®...
+0040A280  00 00 23 03 00 00 2B 01 03 00 0C 00 01 00 0B 00  ..#...+.........
+0040A290  00 00 0B 00 01 00 02 00 0C 00 01 00 0C 00 01 00  ................
+0040A2A0  0B 00 01 00 0B 00 01 00 00 00 01 00 03 00 0C 00  ................
+0040A2B0  01 00 00 00 03 00 02 00 0B 00 01 00 00 00 00 00  ................
+0040A2C0  08 00 00 00 B2 00 00 00 C7 00 09 00 0A 00 07 00  ....²...Ç.......
+0040A2D0  00 00 77 FE 08 00 00 00 D8 00 00 00 D1 00 09 00  ..wþ....Ø...Ñ...
+0040A2E0  0A 00 0B 00 00 00 00 00 58 00 02 00 0C 00 00 00  ........X.......
+0040A2F0  00 00 03 00 04 00 00 00 8C 00 02 00 00 00 94 60  ...............`
+0040A300  08 00 00 00 EE 00 00 00 E7 00 09 00 0A 00 0B 00  ....î...ç.......
+0040A310  00 00 00 00 E7 00 02 00 0C 00 00 00 0B 00 01 00  ....ç...........
+0040A320  02 00 00 00 0C 00 06 00 00 00 74 00 08 00 00 00  ..........t.....
+0040A330  07 01 00 00 FD 00 09 00 0A 00 0B 00 00 00 00 00  ....ý...........
+0040A340  09 00 03 00 0C 00 00 00 00 00 1D 01 0A 00 00 00  ................
+0040A350  0A 00 0C 00 01 00 0B 00 01 00 00 00 01 00 03 00  ................
+0040A360  0C 00 01 00 0B 00 01 00 00 00 00 00 08 00 00 00  ................
+0040A370  0B 01 00 00 1D 01 09 00 0A 00 00 00 06 00 05 00  ................
+0040A380  00 00 C0 1D 08 00 00 00 33 01 00 00 29 01 09 00  ..À.....3...)...
+0040A390  0A 00 0B 00 00 00 00 00 71 00 02 00 0C 00 00 00  ........q.......
+0040A3A0  00 00 3D 01 0A 00 0B 00 00 00 00 00 77 00 02 00  ..=.........w...
+0040A3B0  0C 00 00 00 00 00 3D 01 0A 00 00 00 16 00 02 00  ......=.........
+0040A3C0  00 00 0E 00 03 00 00 00 61 00 08 00 00 00 53 01  ........a.....S.
+0040A3D0  00 00 4C 01 09 00 0A 00 0B 00 00 00 00 00 2C 00  ..L...........,.
+0040A3E0  03 00 0C 00 00 00 0C 00 01 00 0B 00 01 00 00 00  ................
+0040A3F0  2C 21 0B 00 01 00 00 00 01 00 03 00 0C 00 01 00  ,!..............
+0040A400  00 00 07 00 03 00 0B 00 01 00 00 00 00 00 08 00  ................
+0040A410  00 00 59 01 00 00 6E 01 09 00 0A 00 00 00 CA 01  ..Y...n.......Ê.
+0040A420  06 00 00 00 F5 1F 08 00 00 00 81 01 00 00 7A 01  ....õ.........z.
+0040A430  09 00 0A 00 0B 00 00 00 00 00 12 00 02 00 0C 00  ................
+0040A440  00 00 0D 00 0A 25 73 0A 00 00 00 00 30 E1 40 00  .....%s.....0á@.
+0040A450  88 E1 40 00 28 00 6E 00 75 00 6C 00 6C 00 29 00  .á@.(.n.u.l.l.).
+
+kYwxCbJoLp is the correct input
+The flag is A_p0p_pu$H_&_a_Jmp@flare-on.com

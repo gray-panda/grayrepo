@@ -1,0 +1,430 @@
+  ## inspecting pyc file ##
+filename:     2.pyc
+magic number: 0x(03 f3 0d 0a)
+timestamp:    0 (Thu Jan 01 08:00:00 1970)
+code
+   co_argcount:        0
+   co_cellvars:        ()
+   co_filename:        'poc.py'
+   co_firstlineno:     1
+   co_flags:           0x00040
+   co_freevars:        ()
+   co_lnotab:          '\x00\x01\x1f\x02\x08\x02\x16\x01\t\x01\x0c\x02\x12\x01\r\x01\x0f\x01\x03\x01\x17\x01\x07\x01\r\x01\n\x01\r\x02\x11\x01\x07\x02\x14\x01\x0c\x02\t\x02\x1a\x02\x11\x01\x0b\x01\x1a\x02\x10\x01\x0e\x01\x13\x02\x1c\x01\r\x01\x13\x02\x11%\x15\x017\x02\x10\x01\x1e\x02\x9a\x02\x0c\x02 \x02\x1f\x01G\x01'
+   co_name:            '<module>'
+   co_names:           ('sys', 'random', '__version__', 'randint', 'target', 'count', 'error_input', 'True', 'stdin', 'readline', 'input', 'int', 'win_msg', 'stdout', 'write', 'exit', 'join', 'encode', 'tmp', 'stuffs', 'hashlib', 'md5', 'digest', 'stuffer', 'range', 'len', 'x', 'chr', 'ord')
+   co_nlocals:         0
+   co_stacksize:       31
+   co_varnames:        ()
+   co_consts
+      0 -1
+      1 None
+      2 'Flare-On ultra python obfuscater 2000'
+      3 1
+      4 101
+      5 ''
+      6 '(Guesses: %d) Pick a number between 1 and 100:'
+      7 0
+      8 'Invalid input: %s'
+      9 'Too low, try again'
+      10 'Too high, try again'
+      11 'Wahoo, you guessed it with %d guesses\n'
+      12 'Status: super guesser %d'
+      13 25
+      14 'Status: took too long %d'
+      15 'Status: %d guesses'
+      16 (code object)
+         co_argcount:        1
+         co_cellvars:        ()
+         co_filename:        'poc.py'
+         co_firstlineno:     80
+         co_flags:           0x00063
+         co_freevars:        ()
+         co_lnotab:          '\x06\x00'
+         co_name:            '<genexpr>'
+         co_names:           ('chr', 'ord')
+         co_nlocals:         2
+         co_stacksize:       4
+         co_varnames:        ('.0', 'x')
+         co_consts
+            0 66
+            1 None
+         co_code
+            7c 00 00 5d 1b 00 7d 01 00 74 00 00 74 01 00 7c
+            01 00 83 01 00 64 00 00 41 83 01 00 56 01 71 03
+            00 64 01 00 53
+            disassembled:
+             80           0 LOAD_FAST                0 (.0)
+                    >>    3 FOR_ITER                27 (to 33)
+                          6 STORE_FAST               1 (x)
+                          9 LOAD_GLOBAL              0 (chr)
+                         12 LOAD_GLOBAL              1 (ord)
+                         15 LOAD_FAST                1 (x)
+                         18 CALL_FUNCTION            1
+                         21 LOAD_CONST               0 (66)
+                         24 BINARY_XOR          					Single Byte Xor with key 66
+                         25 CALL_FUNCTION            1
+                         28 YIELD_VALUE         
+                         29 POP_TOP             
+                         30 JUMP_ABSOLUTE            3
+                    >>   33 LOAD_CONST               1 (None)			
+                         36 RETURN_VALUE        	
+            
+      17 'hex'
+      18 '312a232f272e27313162322e372548'
+      19 67
+      20 139
+      21 119
+      22 165
+      23 232
+      24 86
+      25 207
+      26 61
+      27 79
+      28 45
+      29 58
+      30 230
+      31 190
+      32 181
+      33 74
+      34 65
+      35 148
+      36 71
+      37 243
+      38 246
+      39 142
+      40 60
+      41 92
+      42 115
+      43 240
+      44 226
+      45 171
+   co_code
+      64 00 00 64 01 00 6c 00 00 5a 00 00 64 00 00 64
+      00 00 01 64 01 00 02 02 6c 01 00 09 5a 01 00 64
+      02 00 5a 02 00 02 02 65 01 00 64 00 00 01 6a 03
+      00 64 03 00 64 04 00 83 02 00 5a 04 00 64 03 00
+      5a 05 00 02 02 09 64 05 00 64 00 00 01 02 02 5a
+      06 00 78 cb 00 03 03 03 65 07 00 64 00 00 01 02
+      02 72 1f 01 64 06 00 64 00 00 01 09 65 05 00 16
+      47 65 00 00 6a 08 00 6a 09 00 83 00 00 5a 0a 00
+      79 17 00 65 0b 00 65 0a 00 03 03 03 64 07 00 83
+      02 00 5a 0a 00 09 57 6e 2b 00 01 64 00 00 01 01
+      01 65 0a 00 02 02 09 5a 06 00 64 00 00 01 64 08
+      00 09 65 06 00 16 47 48 71 58 00 02 02 6e 05 00
+      02 02 58 02 02 65 04 00 65 0a 00 64 00 00 01 6b
+      02 00 09 72 dd 00 50 03 03 03 6e 00 00 65 0a 00
+      65 04 00 6b 00 00 64 00 00 01 72 fd 00 64 00 00
+      01 64 09 00 47 48 6e 0d 00 64 00 00 01 64 0a 00
+      47 48 03 03 03 09 65 05 00 64 03 00 03 03 03 37
+      64 00 00 01 02 02 09 5a 05 00 02 02 71 58 00 57
+      65 04 00 65 0a 00 6b 02 00 72 56 01 64 00 00 01
+      09 64 0b 00 09 65 05 00 16 5a 0c 00 65 00 00 6a
+      0d 00 6a 0e 00 64 00 00 01 02 02 65 0c 00 83 01
+      00 09 01 6e 00 00 65 05 00 02 02 64 03 00 02 02
+      6b 02 00 72 87 01 64 0c 00 65 05 00 16 09 47 48
+      64 00 00 01 65 00 00 03 03 03 6a 0f 00 64 03 00
+      83 01 00 01 6e 00 00 65 05 00 02 02 64 0d 00 02
+      02 6b 04 00 03 03 03 03 03 03 03 03 03 72 c3 01
+      03 03 03 64 0e 00 03 03 03 65 05 00 09 16 47 48
+      65 00 00 6a 0f 00 64 03 00 03 03 03 83 01 00 01
+      6e 11 00 64 0f 00 09 65 05 00 16 47 64 00 00 01
+      48 02 02 09 65 06 00 03 03 03 64 05 00 6b 03 00
+      03 03 03 03 03 03 72 80 03 64 05 00 6a 10 00 64
+      10 00 84 00 00 03 03 03 65 06 00 64 00 00 01 44
+      02 02 09 83 01 00 83 01 00 6a 11 00 64 11 00 03
+      03 03 83 01 00 03 03 03 5a 12 00 03 03 03 02 02
+      65 12 00 02 02 64 12 00 6b 03 00 02 02 72 4e 02
+      65 00 00 02 02 6a 0f 00 64 07 00 83 01 00 02 02
+      01 64 00 00 01 03 03 03 02 02 09 6e 00 00 64 13
+      00 64 14 00 02 02 64 15 00 09 64 16 00 03 03 03
+      64 17 00 64 18 00 64 19 00 09 64 1a 00 03 03 03
+      64 1b 00 09 64 13 00 64 1c 00 03 03 03 64 1d 00
+      64 1e 00 03 03 03 09 64 1f 00 64 20 00 09 64 21
+      00 64 22 00 64 23 00 64 24 00 02 02 09 64 25 00
+      64 00 00 01 64 26 00 64 00 00 01 64 13 00 64 27
+      00 09 64 28 00 64 1a 00 03 03 03 03 03 03 64 29
+      00 64 00 00 01 02 02 64 1d 00 64 00 00 01 64 00
+      00 01 64 2a 00 64 2b 00 64 2c 00 02 02 64 2d 00
+      02 02 67 1f 00 5a 13 00 64 00 00 64 01 00 6c 14
+      00 5a 14 00 65 14 00 03 03 03 6a 15 00 65 0c 00
+      65 12 00 17 83 01 00 64 00 00 01 6a 16 00 83 00
+      00 5a 17 00 78 63 00 65 18 00 65 19 00 65 13 00
+      83 01 00 83 01 00 02 02 44 5d 4d 00 03 03 03 09
+      5a 1a 00 65 1b 00 65 13 00 64 00 00 01 65 1a 00
+      19 64 00 00 01 65 1c 00 65 17 00 65 1a 00 09 65
+      19 00 65 17 00 83 01 00 16 64 00 00 01 19 64 00
+      00 01 83 01 00 64 00 00 01 03 03 03 41 09 83 01
+      00 64 00 00 01 47 71 29 03 57 48 09 09 6e 00 00
+      64 01 00 53 03 03 03
+      disassembled:
+        2           0 LOAD_CONST               0 (-1)
+                    3 LOAD_CONST               1 (None)
+                    6 IMPORT_NAME              0 (sys)
+                    9 STORE_NAME               0 (sys)
+                   12 LOAD_CONST               0 (-1)
+                   19 LOAD_CONST               1 (None)
+                   24 IMPORT_NAME              1 (random)
+                   28 STORE_NAME               1 (random)
+      
+        4          31 LOAD_CONST               2 ('Flare-On ultra python obfuscater 2000')
+                   34 STORE_NAME               2 (__version__)
+      
+        6          39 LOAD_NAME                1 (random)          
+                   46 LOAD_ATTR                3 (randint)
+                   49 LOAD_CONST               3 (1)
+                   52 LOAD_CONST               4 (101)
+                   55 CALL_FUNCTION            2
+                   58 STORE_NAME               4 (target)		target = randint(1,101)
+      
+        7          61 LOAD_CONST               3 (1)			count = 1
+                   64 STORE_NAME               5 (count)
+      
+        8          70 LOAD_CONST               5 ('')
+                   79 STORE_NAME               6 (error_input)	error_input = ''
+      
+       10          82 SETUP_LOOP             203 (to 288)
+              >>   88 LOAD_NAME                7 (True)			while (true)
+                   97 POP_JUMP_IF_FALSE      287
+      
+       11         100 LOAD_CONST               6 ('(Guesses: %d) Pick a number between 1 and 100:')
+                  108 LOAD_NAME                5 (count)
+                  111 BINARY_MODULO       
+                  112 PRINT_ITEM          						print '(Guesses: %d) Pick a number between 1 and 100:' % count
+      
+       12         113 LOAD_NAME                0 (sys)
+                  116 LOAD_ATTR                8 (stdin)
+                  119 LOAD_ATTR                9 (readline)
+                  122 CALL_FUNCTION            0
+                  125 STORE_NAME              10 (input)		input = sys.stdin.readline()
+      
+       13         128 SETUP_EXCEPT            23 (to 154)
+      
+       14         131 LOAD_NAME               11 (int)
+                  134 LOAD_NAME               10 (input)
+                  140 LOAD_CONST               7 (0)
+                  143 CALL_FUNCTION            2
+                  146 STORE_NAME              10 (input)		input = (int) input
+                  150 POP_BLOCK           
+                  151 JUMP_FORWARD            43 (to 197)
+      
+       15     >>  154 POP_TOP             						readline EXCEPTION
+                  159 POP_TOP             
+                  160 POP_TOP             
+      
+       16         161 LOAD_NAME               10 (input)
+                  167 STORE_NAME               6 (error_input)	error_input = input
+      
+       17         174 LOAD_CONST               8 ('Invalid input: %s')
+                  178 LOAD_NAME                6 (error_input)
+                  181 BINARY_MODULO       
+                  182 PRINT_ITEM          						print 'Invalid input: %s' % error_input
+                  183 PRINT_NEWLINE       						print ''
+      
+       18         184 JUMP_ABSOLUTE           88
+                  189 JUMP_FORWARD             5 (to 197)
+                  194 END_FINALLY         
+      
+       20     >>  197 LOAD_NAME                4 (target)
+                  200 LOAD_NAME               10 (input)
+                  207 COMPARE_OP               2 (==)
+                  211 POP_JUMP_IF_FALSE      221				if (target == input)
+      
+       21         214 BREAK_LOOP          							break (goes to 288)
+                  218 JUMP_FORWARD             0 (to 221)
+      
+       23     >>  221 LOAD_NAME               10 (input)
+                  224 LOAD_NAME                4 (target)
+                  227 COMPARE_OP               0 (<)			
+                  234 POP_JUMP_IF_FALSE      253				if (input < target)
+      
+       24         241 LOAD_CONST               9 ('Too low, try again')
+                  244 PRINT_ITEM          
+                  245 PRINT_NEWLINE       						print 'Too low, try again'
+                  246 JUMP_FORWARD            13 (to 262)
+      
+       26     >>  253 LOAD_CONST              10 ('Too high, try again')
+                  256 PRINT_ITEM          
+                  257 PRINT_NEWLINE       						print 'Too high, try again'
+      
+       28     >>  262 LOAD_NAME                5 (count)
+                  265 LOAD_CONST               3 (1)
+                  271 INPLACE_ADD         
+                  279 STORE_NAME               5 (count)		count = count + 1
+                  284 JUMP_ABSOLUTE           88
+              >>  287 POP_BLOCK           
+      
+       30     >>  288 LOAD_NAME                4 (target)
+                  291 LOAD_NAME               10 (input)
+                  294 COMPARE_OP               2 (==)
+                  297 POP_JUMP_IF_FALSE      342				if (target == input)
+      
+       31         305 LOAD_CONST              11 ('Wahoo, you guessed it with %d guesses\n')
+                  309 LOAD_NAME                5 (count)
+                  312 BINARY_MODULO       
+                  313 STORE_NAME              12 (win_msg)		win_msg = 'Wahoo, you guessed it with %d guesses\n' % count
+      
+       32         316 LOAD_NAME                0 (sys)
+                  319 LOAD_ATTR               13 (stdout)
+                  322 LOAD_ATTR               14 (write)
+                  331 LOAD_NAME               12 (win_msg)		sys.stdout.write(win_msg)
+                  334 CALL_FUNCTION            1
+                  338 POP_TOP             
+                  339 JUMP_FORWARD             0 (to 342)
+      
+       34     >>  342 LOAD_NAME                5 (count)
+                  347 LOAD_CONST               3 (1)
+                  352 COMPARE_OP               2 (==)			if count == 1
+                  355 POP_JUMP_IF_FALSE      391
+      
+       35         358 LOAD_CONST              12 ('Status: super guesser %d')
+                  361 LOAD_NAME                5 (count)
+                  364 BINARY_MODULO       
+                  366 PRINT_ITEM          
+                  367 PRINT_NEWLINE       						print 'Status: super guesser %d' % count
+      
+       36         372 LOAD_NAME                0 (sys)
+                  378 LOAD_ATTR               15 (exit)
+                  381 LOAD_CONST               3 (1)
+                  384 CALL_FUNCTION            1				sys.exit(1)
+                  387 POP_TOP             
+                  388 JUMP_FORWARD             0 (to 391)
+      
+       38     >>  391 LOAD_NAME                5 (count)
+                  396 LOAD_CONST              13 (25)
+                  401 COMPARE_OP               4 (>)			if count > 25
+                  413 POP_JUMP_IF_FALSE      451
+      
+       39         419 LOAD_CONST              14 ('Status: took too long %d')
+                  425 LOAD_NAME                5 (count)
+                  429 BINARY_MODULO       
+                  430 PRINT_ITEM          
+                  431 PRINT_NEWLINE       						print 'Status: took too long %d' % count
+      
+       40         432 LOAD_NAME                0 (sys)
+                  435 LOAD_ATTR               15 (exit)
+                  438 LOAD_CONST               3 (1)
+                  444 CALL_FUNCTION            1				sys.exit(1)
+                  447 POP_TOP             
+                  448 JUMP_FORWARD            17 (to 468)
+      
+       42     >>  451 LOAD_CONST              15 ('Status: %d guesses')
+                  455 LOAD_NAME                5 (count)
+                  458 BINARY_MODULO       
+                  459 PRINT_ITEM          
+                  464 PRINT_NEWLINE       						print 'Status: %d guesses' % count
+      
+       79     >>  468 LOAD_NAME                6 (error_input)
+                  474 LOAD_CONST               5 ('')
+                  477 COMPARE_OP               3 (!=)
+                  486 POP_JUMP_IF_FALSE      896				if (error_input != '')
+      
+       80         489 LOAD_CONST               5 ('')
+                  492 LOAD_ATTR               16 (join)
+                  495 LOAD_CONST              16 (<code object <genexpr> at 00000000029858B0, file "poc.py", line 80>) (This is a Single-Byte XOR with key 66)
+                  498 MAKE_FUNCTION            0
+                  504 LOAD_NAME                6 (error_input)
+                  511 GET_ITER            
+                  515 CALL_FUNCTION            1
+                  518 CALL_FUNCTION            1
+                  521 LOAD_ATTR               17 (encode)
+                  524 LOAD_CONST              17 ('hex')
+                  530 CALL_FUNCTION            1
+                  536 STORE_NAME              18 (tmp)			tmp = encode('hex', singleByteXor66(error_input))
+      
+       82         544 LOAD_NAME               18 (tmp)
+                  549 LOAD_CONST              18 ('312a232f272e27313162322e372548')
+                  552 COMPARE_OP               3 (!=)
+                  557 POP_JUMP_IF_FALSE      590				if (tmp != '312a232f272e27313162322e372548')
+      
+       83         560 LOAD_NAME                0 (sys)
+                  565 LOAD_ATTR               15 (exit)
+                  568 LOAD_CONST               7 (0)			
+                  571 CALL_FUNCTION            1				sys.exit(0)
+                  576 POP_TOP             
+                  587 JUMP_FORWARD             0 (to 590)
+      
+       85     >>  590 LOAD_CONST              19 (67)
+                  593 LOAD_CONST              20 (139)
+                  598 LOAD_CONST              21 (119)
+                  602 LOAD_CONST              22 (165)
+                  608 LOAD_CONST              23 (232)
+                  611 LOAD_CONST              24 (86)
+                  614 LOAD_CONST              25 (207)
+                  618 LOAD_CONST              26 (61)
+                  624 LOAD_CONST              27 (79)
+                  628 LOAD_CONST              19 (67)
+                  631 LOAD_CONST              28 (45)
+                  637 LOAD_CONST              29 (58)
+                  640 LOAD_CONST              30 (230)
+                  647 LOAD_CONST              31 (190)
+                  650 LOAD_CONST              32 (181)
+                  654 LOAD_CONST              33 (74)
+                  657 LOAD_CONST              34 (65)
+                  660 LOAD_CONST              35 (148)
+                  663 LOAD_CONST              36 (71)
+                  669 LOAD_CONST              37 (243)
+                  676 LOAD_CONST              38 (246)
+                  683 LOAD_CONST              19 (67)
+                  686 LOAD_CONST              39 (142)
+                  690 LOAD_CONST              40 (60)
+                  693 LOAD_CONST              26 (61)
+                  702 LOAD_CONST              41 (92)
+                  711 LOAD_CONST              29 (58)
+                  722 LOAD_CONST              42 (115)
+                  725 LOAD_CONST              43 (240)
+                  728 LOAD_CONST              44 (226)
+                  733 LOAD_CONST              45 (171)
+                  738 BUILD_LIST              31
+                  741 STORE_NAME              19 (stuffs)	stuffs = '...'
+      
+       87         744 LOAD_CONST               0 (-1)
+                  747 LOAD_CONST               1 (None)
+                  750 IMPORT_NAME             20 (hashlib)
+                  753 STORE_NAME              20 (hashlib)
+      
+       89         756 LOAD_NAME               20 (hashlib)
+                  762 LOAD_ATTR               21 (md5)
+                  765 LOAD_NAME               12 (win_msg)
+                  768 LOAD_NAME               18 (tmp)
+                  771 BINARY_ADD          					hashlib.md5(win_msg+tmp)
+                  772 CALL_FUNCTION            1
+                  779 LOAD_ATTR               22 (digest)
+                  782 CALL_FUNCTION            0
+                  785 STORE_NAME              23 (stuffer)	stuffer = hashlib.md5(win_msg+tmp).digest()
+      
+       91         788 SETUP_LOOP              99 (to 890)
+                  791 LOAD_NAME               24 (range)
+                  794 LOAD_NAME               25 (len)
+                  797 LOAD_NAME               19 (stuffs)
+                  800 CALL_FUNCTION            1
+                  803 CALL_FUNCTION            1			range(len(stuffs))
+                  808 GET_ITER            
+              >>  809 FOR_ITER                77 (to 889)
+                  816 STORE_NAME              26 (x)		for x in range(len(stuffs))
+      
+       92         819 LOAD_NAME               27 (chr)
+                  822 LOAD_NAME               19 (stuffs)
+                  829 LOAD_NAME               26 (x)
+                  832 BINARY_SUBSCR       						stuffs[x]
+                  837 LOAD_NAME               28 (ord)
+                  840 LOAD_NAME               23 (stuffer)
+                  843 LOAD_NAME               26 (x)
+                  847 LOAD_NAME               25 (len)
+                  850 LOAD_NAME               23 (stuffer)
+                  853 CALL_FUNCTION            1				len(stuffer)
+                  856 BINARY_MODULO       						x % len(stuffer)
+                  861 BINARY_SUBSCR       						stuffer[x % len(stuffer)]
+                  866 CALL_FUNCTION            1				ord(stuffer[x % len(stuffer)])
+                  876 BINARY_XOR          						stuffs[x] ^ ord(stuffer[x % len(stuffer)])
+                  877 NOP                 
+                  878 CALL_FUNCTION            1				chr(stuffs[x] ^ ord(stuffer[x % len(stuffer)]))
+                  885 PRINT_ITEM          						print the above
+                  886 JUMP_ABSOLUTE          809
+              >>  889 POP_BLOCK           
+      
+       93     >>  890 PRINT_NEWLINE       
+                  893 JUMP_FORWARD             0 (to 896)
+              >>  896 LOAD_CONST               1 (None)
+                  899 RETURN_VALUE        
+      
+  ## done inspecting pyc file ##

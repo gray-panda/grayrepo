@@ -1,0 +1,74 @@
+Prefix "Share:"
+1-d8effa9e8e19f7a2f17a3b55640b55295b1a327a5d8aebc832eae1a905c48b64
+2-f81ae6f5710cb1340f90cd80d9c33107a1469615bf299e6057dea7f4337f67a3
+3-523cb5c21996113beae6550ea06f5a71983efcac186e36b23c030c86363ad294
+4-04b58fbd216f71a31c9ff79b22f258831e3e12512c2ae7d8287c8fe64aed54cd
+5-5888733744329f95467930d20d701781f26b4c3605fe74eefa6ca152b450a5d3
+6-a003fcf2955ced997c8741a6473d7e3f3540a8235b5bac16d3913a3892215f0a
+
+Found where
+1) in GUI.exe {-}
+2) Passed as a argument from GUI.exe to layer1.dll
+3) Layer2.getKey() returns it when it fails to find what it was looking for
+4) Inside Layer2.StringUtils (Dump and Search using hex editor)
+5) Inside Layer3.StringUtils (Method same as four, but step through a few strings before continue, as the string storgae changes location after a3/4)
+6) Inside a png file written to disk after layer3
+
+Flag is "Shamir_1s_C0nfused@flare-on.com"
+
+------------------------
+"no/-|-\\no/-|-\\no/-|-\\2/-|-\\shareShare:2-f81ae6f5710cb1340f90cd80d9c33107a1469615bf299e6057dea7f4337f67a3"
+
+strB	"UtYSc3XYLz4wCCfrR5ssZQ=="	string == base64_encode(md5("sharing"))
+
+flare-layer1-key (wrong key)
+flare-sharing (layer 1 correct key)
+
+------------------
+
+Layer2.Layer2.Start("Nothing useful to see here!")
+
+"SELECT * FROM Win32_VideoController" (debug check for emulator video card)
+
+"RegKey: "
+
+RegKey: AppEvents
+
+MD5 RegistryKey
+
+strB	"Xr4ilOzQ4PCOq3aQ0qbuaQ=="	string == base64_encode(md5("secret"))
+
+RegKey: secret
+
+flare-secret (layer 2 correct key)
+
+"Share:3-523cb5c21996113beae6550ea06f5a71983efcac186e36b23c030c86363ad294"
+"Share:3-523cb5c21996113beae6550ea06f5a71983efcac186e36b23c030c86363ad294"
+
+---------------------
+
+Layer3.Layer3.Start("layer2 -> layer3, almost there!")
+
+"Win32_UserAccount"
+
+"Administrator"
+
+MD5 UserAccount name
+
+strB	"KTUxM5ElLBtBBAdJXNCW/g=="	string == base64_encode(md5("shamir"))
+
+flare-shamir (layer 3 correct key)
+
+--------------------
+.\\share6-decoded.png
+.\\ssss-combine.exe
+
+ProcessStartInfo("share6-decoded.png")
+ProcessStartInfo.verb = "open"
+
+-------------------------
+
+deletes .data, .text, .rscs .reloc strings (nulls them)
+
+1_enable_profiling
+Environment variable COR_ENABLE_PROFILING=1 causes a crash... at layer3 last module init function
