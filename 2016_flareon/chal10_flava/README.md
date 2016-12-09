@@ -51,7 +51,7 @@ Dump these HTTP objects by clicking "File->Export Objects->HTTP". Save the 4 obj
 
 ### Javascript 1
 
-The obfuscated javascript is in the "\\" object. I copied out the Javascript portions and passed it through js-beautifier. This is the [resulting Javascript MISSING js1]()
+The obfuscated javascript is in the "\\" object. I copied out the Javascript portions and passed it through js-beautifier.
 
 The JS code is obfuscated. I will not go through the deobfuscation step by step as it is quite straight-forward. This is the [deobfuscated version of js1](jsstuffs/js1_deobfus.js)
 
@@ -186,8 +186,8 @@ Now we know what that function is doing, let's take a look at the code again
 ![codeagain](img/14.png)
 
 I am guessing f is some kind of BigInteger class to support the calculation of the powmod function. This is what the code is doing
-- initAndRandom creates 3 random values (generator, modulus and a private key)
- - A public key is calculated using these 3 values (public key = generator ^ private key mod modulus)
+- initAndRandom creates 3 random values (generator g, modulus p and a private key)
+ - A public key is calculated using these 3 values (public key A = g ^ private key mod p)
  - Take note, the private key is the "ic" value (we do not know this value)
 - It sends 3 values (generator g, modulus p and public key A) to the server
 - The server responds with public key B and a encrypted msg fffff
@@ -206,7 +206,7 @@ To recover the exponent (which a.ic is) of a powmod function, a [Discrete Logari
 
 > log x*y*z == log x + log y + log z
 
-This means that if we could break the modulus p value into its factors, we can significantly reduce the brute-forcing time. Since the modulus p is not prime in thi case, we could make use of this property to significantly shorten the brute-forcing time. This is also why a proper Diffie-Hellman implementation using a huge prime number for p will take forever to break.
+This means that if we could break the modulus p value into its factors, we can significantly reduce the brute-forcing time. Since the modulus p is not prime in this case, we could make use of this property to significantly shorten the brute-forcing time. This is also why a proper Diffie-Hellman implementation using a huge prime number for p will take forever to break.
 
 Included in the article is a POC Java code that performed the attack. We need to modify this code with our values.
 
@@ -301,7 +301,7 @@ Running it will give us the session key needed to decrypt the 'fffff' message. D
 
 ![yay](img/19.png)
 
-I modified [Javascript file](jsstuffs/js3_decrypt.html) further to include this session key to decrypt the message. I also replaced the "eval" code with "console.log" to see the result instead of executing it.
+I modified [js3](jsstuffs/js3_decrypt.html) further to include this session key to decrypt the message. I also replaced the "eval" code with "console.log" to see the result instead of executing it.
 
 ![decrypt](img/20.png)
 
@@ -387,7 +387,7 @@ I will not go through reversing these code step by step. Below is a summary of w
 
 There are 2 important values here. The parameter "x" and "y". I was stuck here for a longest time. There were no mention of these 2 parameters anyway else in the code, not even in the Javascript code which is where normal exploit kits would have placed them.
 
-I only managed to find them after a hint from @peta909. I still feel it doesn't make sense.
+I only managed to find them after a hint from a [friend](https://twitter.com/peta909) to look at stuffs that wasnt used. I still feel it doesn't make sense.
 
 ### Huh really??
 
@@ -428,7 +428,7 @@ The code seems to be very simple. It is checking thousands of if conditions and 
 
 ![flash3](img/32.png)
 
-I copied the code whole chunk into this [php script](flashstuffs/soln_part5_stage3swf). I used Find and Replace the modify it into php syntax. Specifically, these 3 strings
+I copied the code whole chunk into this [php script](flashstuffs/soln_part5_stage3swf.php). I used Find and Replace the modify it into php syntax. Specifically, these 3 strings
 
 - Replace "\_loc1\_" with "$addFlag"
 - Replace "\_loc2\_" with "$out"

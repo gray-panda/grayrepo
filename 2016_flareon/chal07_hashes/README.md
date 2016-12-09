@@ -136,7 +136,9 @@ Running it gives the following 3 possible target hashes
 f91727f8892e34f2be1786fa115bc4ad621dd4ac92e4de8810744a70338e854adc7803e1eab7094138772f47a05e778af70a1f1d5c8674b6fa63f4127cb25b5598ea410086a995d0c41770b46414599bee613d1a1a64e064c31b9222f70566b9d6939c52
 ```
 
-Based on previous experience, the flag of this challenge would most likely be the plaintext of this target hash. As Flareon 2016 flags are all in the format of *@flare-on.com. I assume that this flag will also follow this format. This means that the input would have been broken up as follows
+Based on previous experience, the flag of this challenge would most likely be the plaintext of this target hash. 
+
+As Flareon 2016 flags are all in the format of *@flare-on.com. I assume that this flag will also follow this format. This means that the input would have been broken up as follows
 
 ```
 XXXXXX
@@ -167,7 +169,9 @@ Breaking it up into its component hashes
 cc720842d0884da08e26d9fccb24bc9c27bd254e (on.com)
 ```
 
-We have to brute-force the first 3 hashes. This [php script](soln_part1.php) does all of the above
+This [php script](soln_part1.php) does all of the above.
+
+We now have to brute-force the first 3 hashes. 
 
 ### Brute-Forcing
 

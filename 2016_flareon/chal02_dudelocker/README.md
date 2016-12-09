@@ -25,13 +25,13 @@ The second check checks for your volume serial number
 
 It checks if your volume serial number is 0x7dab1d35. If it matches, the serial number is returned, else a 0 is returned.
 
-To bypass this, put a breakpoint at this function call in a Debugger. Change to eax value immediately after the function call
+To bypass this, put a breakpoint at this function call in a Debugger. Change the eax value immediately after the function call
 
 ![change](img/d.png)
 
 It is important to set this value to 0x7dab1d35. It will be used later
 
-If the checks are successfullhy bypassed, this part of the code is reached.
+If the checks are successfully bypassed, this part of the code is reached.
 
 ![setup](img/04.png)
 

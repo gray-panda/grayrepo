@@ -89,7 +89,7 @@ However, the brute force is not successful. I then started to trace how these ta
 
 I will not go through the reversing of this part as it involves a lot of code. 
 
-Long story short, the substring that was created previously from the current executable filename is used as some kind of key to decrypt the target hashes. The rest of the code of this function basically does that.
+Long story short, the substring that was created at the beginning from the current executable filename is used as some kind of key to decrypt the target hashes. The rest of the code of this function basically does that. We need the correct filename for the target hashes to be decrypted correctly.
 
 How do we know what is the correct filename? That was when I remembered seeing something before. When I first open the file in IDA Pro, I was greeted with this prompt
 
