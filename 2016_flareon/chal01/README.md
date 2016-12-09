@@ -54,5 +54,5 @@ Running it will reveal the flag
 
 ![flag](img/07.png)
 
-The flag is **sh00ting_phish_in_a_barrel@flare-on.com**
+The flag is `**sh00ting_phish_in_a_barrel@flare-on.com**`
 
