@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Navigate home</string>
+    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
+    <string name="abc_action_bar_up_description">Navigate up</string>
+    <string name="abc_action_menu_overflow_description">More options</string>
+    <string name="abc_action_mode_done">Done</string>
+    <string name="abc_activity_chooser_view_see_all">See all</string>
+    <string name="abc_activitychooserview_choose_application">Choose an app</string>
+    <string name="abc_capital_off">OFF</string>
+    <string name="abc_capital_on">ON</string>
+    <string name="abc_search_hint">Search…</string>
+    <string name="abc_searchview_description_clear">Clear query</string>
+    <string name="abc_searchview_description_query">Search query</string>
+    <string name="abc_searchview_description_search">Search</string>
+    <string name="abc_searchview_description_submit">Submit query</string>
+    <string name="abc_searchview_description_voice">Voice search</string>
+    <string name="abc_shareactionprovider_share_with">Share with</string>
+    <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
+    <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="TAG">SantaGram</string>
+    <string name="analytics_launch_url">https://analytics.northpolewonderland.com/report.php?type=launch</string>
+    <string name="analytics_usage_url">https://analytics.northpolewonderland.com/report.php?type=usage</string>
+    <string name="appVersion">4.2</string>
+    <string name="app_name">SantaGram</string>
+    <string name="appbar_scrolling_view_behavior">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="banner_ad_url">http://ads.northpolewonderland.com/affiliate/C9E380C8-2244-41E3-93A3-D6C6700156A5</string>
+    <string name="bottom_sheet_behavior">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="character_counter_pattern">%1$d / %2$d</string>
+    <string name="debug_data_collection_url">http://dev.northpolewonderland.com/index.php</string>
+    <string name="debug_data_enabled">false</string>
+    <string name="dungeon_url">http://dungeon.northpolewonderland.com/</string>
+    <string name="exhandler_url">http://ex.northpolewonderland.com/exception.php</string>
+    <string name="title_activity_comments">Comments</string>
+</resources>

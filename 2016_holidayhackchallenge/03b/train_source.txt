@@ -1,0 +1,77 @@
+#!/bin/bash
+HOMEDIR="/home/conductor"
+CTRL="$HOMEDIR/"
+DOC="$HOMEDIR/TrainHelper.txt"
+PAGER="less"
+BRAKE="on"
+PASS="24fb3e89ce2aa0ea422c3d511d40dd84"
+print_header() {
+        echo ""
+        echo "Train Management Console: AUTHORIZED USERS ONLY"
+        echo ""
+}
+print_main_menu() {
+        echo ""
+        echo "                  ==== MAIN MENU ===="
+        echo ""
+        echo "STATUS:                   Train Status"
+        echo "BRAKEON:                  Set Brakes"
+        echo "BRAKEOFF:                 Release Brakes"
+        echo "START:                            Start Train"
+        echo "HELP:                             Open the help document"
+        echo "QUIT:                             Exit console"
+        echo ""
+        echo -n "menu:main> "
+}
+# MAIN
+trap "exit" SIGHUP SIGINT SIGTERM SIGQUIT
+print_header
+while(true); do
+        print_main_menu
+        read ARG
+        echo ""
+        if [[ ! $ARG ]] ; then
+                echo "Please select an number"
+                continue
+        fi
+        case "$ARG" in
+                STATUS)
+                        echo "Brake:                            $BRAKE"
+                        echo "BoilerOn:                 Yes"
+                        echo "BoilerTemp:                       Normal"
+                        echo "Coal Capacity Level:              97%"
+                        echo "FluxCapacitor:                    Fluxing"
+                        echo "Top Speed:                        88mph"
+                        ;;
+                BRAKEON)
+                        sleep 1
+                        BRAKE="on"
+                        echo "The brake has been applied."
+            echo $BRAKE
+                        ;;
+                BRAKEOFF)
+                        sleep 1
+                        BRAKE="off"
+                        echo "*******CAUTION*******"
+                        echo "The brake has been released!"
+                        echo "*******CAUTION*******"
+                        echo $BRAKE
+                        ;;
+                START)
+                        echo  "Checking brakes...."
+                        sleep 3
+                        if [ $BRAKE == "on" ] ; then
+                                echo "Brake must be off to start the train."
+                        else
+                                read -s -p "Enter Password: " password
+                                [ "$password" == "$PASS" ] && QUEST_UID=$QUEST_UID ./ActivateT
+rain || echo "Access denied"
+                        fi
+                        continue
+                        ;;
+                HELP) $PAGER $DOC
+                        ;;
+                QUIT) echo "Exiting" ; exit
+                        ;;
+        esac
+done
