@@ -35,3 +35,7 @@ I've managed to complete the Windows, Mobile and Docs tier. Therefore, I will be
 - [Doc-3 PDF](doc3_pdf)
 - [Doc-4 Doc](doc4_doc)
 - [Doc-5 Calc](doc5_calc)
+
+Also, got these wonderful prizes for completing multiple tiers :)
+
+![coins](coins.jpg)
