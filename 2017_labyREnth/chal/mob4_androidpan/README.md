@@ -68,7 +68,7 @@ This is what it does
 - Creates a "/data/data/com.panw.ctf/.hide" directory
 - Writes a file at "/data/data/com.panw.ctf/.hide/.payload"
   - File content is stored at offset 0x23b5 of the binary.
-- Calls Android Function "com/panw/ctf/common/Loader->load(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+- Calls Android Function "com/panw/ctf/common/Loader-\>load(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
   - With 3 parameters
     - "G0PAl0aLtOPaNw&%"
     - "/data/data/com.panw.ctf/.hide/.payload"
@@ -83,7 +83,7 @@ This is what it does
     - Decrypts the file specified by the 2nd argument "/data/data/com.panw.ctf/.hide/.payload"
     - Write the decrypted contents into the file specified by the 3rd argument "/data/data/com.panw.ctf/.hide/.payload.zip"
 - Once the file as been loaded, it calls the following method
-  - com.panw.ctf.Util->entry(Landroid/app/Application;Ldalvik/system/DexClassLoader;)V
+  - com.panw.ctf.Util-\>entry(Landroid/app/Application;Ldalvik/system/DexClassLoader;)V
 
 Let's extract the encrypted ".payload" file first  
 Open libloader.so in a Hex Editor and copy out all the bytes starting from 0x23b5 into a tmp file "payload.bin"

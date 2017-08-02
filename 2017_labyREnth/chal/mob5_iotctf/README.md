@@ -87,11 +87,11 @@ However, set_ntp() only returns a boolean result. So let's focus on return_ip()
 ![returnip](img/06.png)
 
 To trigger this function, we have to visit
-- http://127.0.0.1:8080/get_ip.html?interface=
+- hxxp://127.0.0.1:8080/get_ip.html?interface=
 
 The "interface" parameter is used unsanitised in the cmd call
 
-Let's try http://127.0.0.1:8080/get_ip.html?interface=a;ps;%23 (%23 is url-encoded '#')
+Let's try hxxp://127.0.0.1:8080/get_ip.html?interface=a;ps;%23 (%23 is url-encoded '#')
 
 This will result in the cmd 
 
@@ -163,7 +163,7 @@ Create a symbolic link in the "files" subfolder to our fwudpate file
 > php cmdInject.php "ln -s /usr/sbin/fwupdate /root/mgmt/files/fwupdate"
 ```
 
-Browse to http://127.0.0.1:8080/files/fwupdate to download the file.
+Browse to hxxp://127.0.0.1:8080/files/fwupdate to download the file.
 
 Use [uncompyle](https://github.com/rocky/python-uncompyle6) to decompile the pyc back to its python code
 
