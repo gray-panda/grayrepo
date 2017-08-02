@@ -12,7 +12,7 @@ First, setup the environment to run the app in.
 
 Once the simulator is up and running, issue the following command to install the app
 
-> xcrun simctl install booted <path to showmewhatyougot.app>
+> xcrun simctl install booted \<path to showmewhatyougot.app\>
 
 Launch the app and the app should exit after awhile.  
 Also the app asks for Location permission, this can be a hint to what to lookout for in the code.
@@ -63,7 +63,7 @@ Base-64 decodes it
 
 Xor decrypt it with the specified key
 
-You can now use a debugger (lldb) and set breakpoints at the handler function locations mentioned before to figure out what they do. My previous [labyREnth 2016 writeup here]() shows an easy way to figure out breakpoints in iOS Simulator.
+You can now use a debugger (lldb) and set breakpoints at the handler function locations mentioned before to figure out what they do. My previous [labyREnth 2016 writeup here](https://github.com/gray-panda/grayrepo/tree/master/2016_labyREnth/mob5_ioga) shows an easy way to figure out breakpoints in iOS Simulator.
 
 This is what each of the handler functions do.
 
@@ -113,7 +113,7 @@ It seems that these values are important. Let's match them first
   - Displays the message "I LIKE WHAT YOU GOT. GOOD JOB." if it is the same.
 
 Combining the 3 decrypted strings will give us the flag.  
-The flag is never displayed on the UI, therefore one must be able to use lldb and the simulator correctly to get the flag.
+The flag is never displayed on the UI, therefore one must use lldb and the simulator to get the flag.
 
 ### How to get the flag in iOS Simulator + lldb
 
