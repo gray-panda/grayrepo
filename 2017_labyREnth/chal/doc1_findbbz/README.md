@@ -109,7 +109,7 @@ Set objWord = Nothing
 Run the script as follows
 
 ```bash
-cscript DocumentVariableExtractor.vbs C:\Users\ggg\Desktop\labyrenth2017\docs01\OLE_DOCUMENT__find_bbz_challenge_file__1.bin wfozoV > dict.txt
+cscript DocumentVariableExtractor.vbs <Full Path to OLE_DOCUMENT__find_bbz_challenge_file__1.bin> wfozoV > dict.txt
 ```
 
 I copied the value from "dict.txt" and wrote [soln.php](soln.php) that will decrypt the 3 strings

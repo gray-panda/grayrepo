@@ -8,7 +8,7 @@ The VBA macros inside MarsSpider_Contract.doc is password protected.
 - There are ways to bypass it
 
 It can be bypass by using OfficeMalScanner or manually using the following steps
-- Open xls file with a hex editor. (e.g. hexedit.exe from http://www.physics.ohio-state.edu/~prewett/hexedit/)
+- Open the file with a hex editor. (e.g. hexedit.exe from http://www.physics.ohio-state.edu/~prewett/hexedit/)
 - Search for "DPB"
 - Replace "DPB" to "DPx" (or any other String)
 - Save file.
@@ -203,6 +203,8 @@ The domain string "xJxAxU" worked. Decrypted command is
 [Environment]::SetEnvironmentVariable("HWID","093-75115-37124-50142-30110-87150-78116-83115-81124-51121-50114-67145-51139-47130","User");
 Clear-EventLog "Windows PowerShell"
 ```
+
+Take note of the **HWID** value. It will be used in the next part.
 
 Let's go on the **ziggy.vbs**
 
@@ -411,8 +413,9 @@ eXit
 Windows Batch (bat) scripting is very free form.  
 All characters except ":" and "=" can be used as a variable name.  
 Hence, **594f54.bat** is incredibly confusing to read.
+- Alot of what we think are special functions or constructs are actually just variable names
 
-"594f54.bat" does the following
+**594f54.bat** does the following
 - Stores the Drive letter, Shortened-FullPath, Filename and Filesize of the first argument file
   - which in this case is the bat script itself
 - Checks that the USERNAME env variable is 10 chars long and its 4-6 chars is "dBo"

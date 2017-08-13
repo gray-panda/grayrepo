@@ -37,7 +37,7 @@ Download the png file and save it. This is part 1 of the flag
 
 ![info2](img/05.png)
 
-Decode the Base64 string
+Decoding the Base64 string
 
 > R3JlYXQgc3RhcnQgaW4gZmluZGluZyB0aGlzIGNsdWUuICANCldlIGhvcGUgdGhhdCB5b3UgbGlrZSBodW50aW5nLiANCkFzIHRoZXJlIGFyZSBzZXZlcmFsIHRoaW5ncyBmb3IgeW91IHRvIGh1bnQgZm9yLg0KDQpUaGUgaGludCB0byBsb2dpbiBpczogDQpvbWd3dGZub2JicQ==
 
@@ -74,7 +74,7 @@ I spent quite some time looking through the Javascripts but they are actually no
 They are mainly used to draw some graphs.
 
 The important part of the PDF is actually the EmbeddedFile.  
-The Javascript code actually gave a clue on the name of this file **secret.invite.hwp**
+The Javascript code also gave a clue on the name of this file **secret.invite.hwp**
 
 ```bash
 pdf-parser -s /EmbeddedFile secret.invite.pdf
@@ -126,7 +126,7 @@ There is also an embedded file at the end of the message.
 
 Clicking on the file allows me to save it ==> [troll.js](3_troll.js)
 
-"troll.js" is obfuscated. However, the obfuscation is straight forward to deobfuscate albeit tedious  
+**troll.js** is obfuscated. However, the obfuscation is straight forward to deobfuscate albeit tedious  
 The code is bascially building a large string and then running it through eval at the end.
 
 I've deobfuscated the code to [untroll.js](3_untroll.js).  
