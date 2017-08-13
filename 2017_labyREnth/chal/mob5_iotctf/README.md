@@ -4,8 +4,7 @@
 The password to decrypt the challenge 7zip file is "Jgyx98zdRKDTgN6qJDwruNZ2zRfW}>vEgwvmgzRN"
 
 However, the challenge zip file is huge (>500MB). Therefore, I did not upload it to this writeup.  
-This is a really interesting challenge so I hope Palo Alto will provided a download link sometime in the future.  
-If you really need it, pop me a message over Twitter (@_graypanda) and I'll pass it to you somehow.
+Here is a [link](http://dl.labyrenth.com/iotcamera/de62a5708799f03332ea034e3e748d8476f6beb3f6ace5b3059c5b264ea84dc7.7z) to the challenge file hosted on Labyrenth's archive site. (PW is infected)
 
 We are provided with a Docker image and some instructional text files on how to install Docker and run this image
 

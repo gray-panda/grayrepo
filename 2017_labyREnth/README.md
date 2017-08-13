@@ -1,6 +1,6 @@
 # LabyREnth 2017 CTF By Palo Alto
 
-Challenge site @ http://labyrenth.com/
+Challenge Archive site @ http://archive.labyrenth.com/
 
 This was an approximately 6 weeks long reverse engineering centric CTF created by Palo Alto
 
@@ -22,7 +22,11 @@ I've managed to complete 1 random challenge, the 5 main tiers and the Boss chall
 - [Mobile-5 iotctf](chal/mob5_iotctf)
 
 **Docs**
-- Coming Soon
+- [Document-1 Findbbz](chal/doc1_findbbz)
+- [Document-2 FindWaldo](chal/doc2_findwaldo)
+- [Document-3 SecretInvite](chal/doc3_secretinvite)
+- [Document-4 macroses](chal/doc4_macroses)
+- [Document-5 MarsSpider](chal/doc5_marsspider)
 
 **Binary**
 - Coming Soon
