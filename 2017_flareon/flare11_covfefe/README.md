@@ -91,14 +91,18 @@ The last column shows the dereferenced value of arg2 and whether the jump was ta
 Analyzing the trace was the most tedious part of this challenge.
 
 This "emulator" is basically performing all kinds of operations using subtraction and bit shifting only.  
-Alot of complex string of instructions are actually just performing simple mathematical operations.  
+Alot of complex chain of instructions are actually just performing simple mathematical operations.  
 
 One example is how it performs XOR of 2 numbers (num1 and num2)
-- Loops 32 times (for a 32-bit number)
+- Loops 32 times (xoring 32-bit numbers)
   - Checks if num1 and num2 is negative (negative means MSB is 1)
     - If only one of them is negative, left shift a "1" bit into the result number (1 ^ 0)
     - Else left shift a "0" bit into the result number
   - Left shift num1 and num2 by 1 bit
+
+Another example is how it checks if a number is negative
+- Subtract the number from "0" and stores the result into [arg2]
+  - If the result in [arg2] is <= 0, the conditional jump (arg3) will be taken, thus the number is positive and vice versa
 
 I focused the analysis on the parts where our input is checked.  
 
