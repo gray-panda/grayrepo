@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:label="@string/brian_title" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="@color/colorSecondary" android:id="@id/vcxv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Shrimp Poppers or Extreme Fajitas" />
+    <ImageView android:id="@id/pfdu" android:tag="hashtag" android:layout_width="wrap_content" android:layout_height="0.0dip" android:scaleType="centerCrop" app:srcCompat="@drawable/brian" />
+    <Button android:id="@id/rewytu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="9.0dip" android:text="Something to nibble on" app:layout_constraintBottom_toBottomOf="@id/pfdu" app:layout_constraintLeft_toRightOf="@id/pfdu" app:layout_constraintRight_toLeftOf="@id/pfdu" />
+    <EditText android:textSize="24.0sp" android:id="@id/xkcvlr" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginBottom="8.0dip" android:ems="10" android:inputType="textPersonName" app:layout_constraintBottom_toTopOf="@id/rewytu" app:layout_constraintLeft_toRightOf="@id/pfdu" app:layout_constraintRight_toLeftOf="@id/pfdu" />
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Display2" android:textColor="@color/colorAccent" android:id="@id/cvhgdf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pizza Shooters" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
