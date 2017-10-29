@@ -69,7 +69,7 @@ This is the decrypted secondstage binary
 
 The "secondstage" binary connects to "probably.suspicious.to" at port 9443 to receive commands.
 
-In wireshak, we can filter by this port and dump all the packets in this stream into a file
+In wireshark, we can filter by this port and dump all the packets in this stream into a file
 - Filter packets by "tcp.port == 9443"
 - Right-Click one of the packets and select "Follow TCP Stream"
 - Change diplay format to "Raw"
@@ -306,7 +306,7 @@ The attacker then uses "psexec" to execute "srv2.exe" on larryjohnson's machine.
 
 This essentially compromised larryjohnson's machine.
 
-The attacker then sets up the current infected machine as a pivot to talk to the larryjohnson's machine.
+The attacker then sets up the current infected machine as a pivot to talk to larryjohnson's machine.
 
 ![connect](img/15.png)
 
