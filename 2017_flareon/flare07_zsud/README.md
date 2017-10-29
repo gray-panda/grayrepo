@@ -348,7 +348,7 @@ This game allows you to chain multiple commands together using commas
 n,get key drawer,w,n,n,e,e,s,s,s,n,e,w,n,e,look key
 ```
 
-If the direction is correct, the game will replay with "Key emanates some warmth"  
+If the direction is correct, the game will reply with "Key emanates some warmth"  
 I used this to brute-force the correct direction string.  
 Eventually, you will get the correct key (the correct key is 53 chars long)
 
