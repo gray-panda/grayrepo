@@ -125,33 +125,33 @@ Repeat this 0x1A times, changeing the remainder result from the Year+Month divis
 This is the full list of the passwords and results.  
 Combining the key parts gives us the flag.
 
-```
-0x00:	pharmacology.dll 	filingmeteorsgeminately					key[00] = 0x77 'w'
-0x01:	hernias.dll			leggykickedflutters						key[01] = 0x75 'u'
-0x02:	pelf.dll			incalculabilitycombustionsolvency		key[02] = 0x75 'u'
-0x03:	costal.dll			crappingrewardsanctity					key[03] = 0x75 'u'
-0x04:	octopus.dll			evolvablepollutantgavial				key[04] = 0x74 't'
-0x05:	challengers.dll		ammoniatesignifiesshampoo				key[05] = 0x2d '-'
-0x06:	jeweller.dll		majesticallyunmarredcoagulate			key[06] = 0x65 'e'
-0x07:	bronzing.dll		roommatedecapitateavoider				key[07] = 0x78 'x'
-0x08:	low.dll				fiendishlylicentiouslycolouristic		key[08] = 0x70 'p'
-0x09:	holidays.dll		sororityfoxyboatbill					key[09] = 0x30 '0'
-0x0a:	rawhide.dll			dissimilitudeaggregativewracks			key[10] = 0x72 'r'
-0x0b:	backstretch.dll		allophoneobservesbashfulness			key[11] = 0x74 't'
-0x0c:	testability.dll		incuriousfatherlinessmisanthropically	key[12] = 0x73 's'
-0x0d:	crossroad.dll		screensassonantprofessionalisms			key[13] = 0x40 '@'
-0x0e:	cocking.dll			religionistmightplaythings				key[14] = 0x66 'f'
-0x0f:	osseous.dll			airglowexactlyviscount					key[15] = 0x6c 'l'
-0x10:	magnetising.dll		thonggeotropicermines					key[16] = 0x61 'a'
-0x11:	allusively.dll		gladdingcocottekilotons					key[17] = 0x72 'r'
-0x12:	gastronomist.dll	diagrammaticallyhotfootsid				key[18] = 0x65 'e'
-0x13:	meetinghouse.dll	corkerlettermenheraldically				key[19] = 0x2d '-'
-0x14:	flouted.dll			ulnacontemptuouscaps					key[20] = 0x6f 'o'
-0x15:	malformation.dll	impureinternationalisedlaureates		key[21] = 0x6e 'n'
-0x16:	pugnacious.dll		anarchisticbuttonedexhibitionistic		key[22] = 0x2e '.'
-0x17:	ringbone.dll		tantalitemimicryslatted					key[23] = 0x63 'c'
-0x18:	heresy.dll 			basophileslapsscrapping					key[24] = 0x6f 'o'
-0x19:	lustrated.dll		orphanedirreproducibleconfidences		key[25] = 0x6d 'm'
-```
+|Remainder|DLL Name 	|Password 								|Key Part 		   |
+|----|------------------|---------------------------------------|------------------|
+|0x00|pharmacology.dll 	|filingmeteorsgeminately				|key[00] = 0x77 'w'|
+|0x01|hernias.dll 		|leggykickedflutters					|key[01] = 0x75 'u'|
+|0x02|pelf.dll 			|incalculabilitycombustionsolvency		|key[02] = 0x75 'u'|
+|0x03|costal.dll 		|crappingrewardsanctity					|key[03] = 0x75 'u'|
+|0x04|octopus.dll 		|evolvablepollutantgavial				|key[04] = 0x74 't'|
+|0x05|challengers.dll 	|ammoniatesignifiesshampoo				|key[05] = 0x2d '-'|
+|0x06|jeweller.dll 		|majesticallyunmarredcoagulate			|key[06] = 0x65 'e'|
+|0x07|bronzing.dll 		|roommatedecapitateavoider				|key[07] = 0x78 'x'|
+|0x08|low.dll 			|fiendishlylicentiouslycolouristic		|key[08] = 0x70 'p'|
+|0x09|holidays.dll 		|sororityfoxyboatbill					|key[09] = 0x30 '0'|
+|0x0a|rawhide.dll 		|dissimilitudeaggregativewracks			|key[10] = 0x72 'r'|
+|0x0b|backstretch.dll 	|allophoneobservesbashfulness			|key[11] = 0x74 't'|
+|0x0c|testability.dll 	|incuriousfatherlinessmisanthropically	|key[12] = 0x73 's'|
+|0x0d|crossroad.dll		|screensassonantprofessionalisms		|key[13] = 0x40 '@'|
+|0x0e|cocking.dll		|religionistmightplaythings				|key[14] = 0x66 'f'|
+|0x0f|osseous.dll		|airglowexactlyviscount					|key[15] = 0x6c 'l'|
+|0x10|magnetising.dll	|thonggeotropicermines					|key[16] = 0x61 'a'|
+|0x11|allusively.dll	|gladdingcocottekilotons				|key[17] = 0x72 'r'|
+|0x12|gastronomist.dll	|diagrammaticallyhotfootsid				|key[18] = 0x65 'e'|
+|0x13|meetinghouse.dll	|corkerlettermenheraldically			|key[19] = 0x2d '-'|
+|0x14|flouted.dll		|ulnacontemptuouscaps					|key[20] = 0x6f 'o'|
+|0x15|malformation.dll	|impureinternationalisedlaureates		|key[21] = 0x6e 'n'|
+|0x16|pugnacious.dll	|anarchisticbuttonedexhibitionistic		|key[22] = 0x2e '.'|
+|0x17|ringbone.dll		|tantalitemimicryslatted				|key[23] = 0x63 'c'|
+|0x18|heresy.dll 		|basophileslapsscrapping				|key[24] = 0x6f 'o'|
+|0x19|lustrated.dll		|orphanedirreproducibleconfidences		|key[25] = 0x6d 'm'|
 
 The flag is **wuuut-exp0rts@flare-on.com**
