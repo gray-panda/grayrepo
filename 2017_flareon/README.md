@@ -22,3 +22,5 @@ Do note all challenge zip files provided are password protected (pw is "infected
 |[10-shell_php](flare10_shellphp) 		|Cryptanalysis				|
 |[11-covfefe](flare11_covfefe)			|x86 PE "Emulator"			|
 |[12-missing](flare12_missing)			|CNC Protocol Analysis		|
+
+Winners listed at [http://flare-on.com/2017.html](http://flare-on.com/2017.html)
