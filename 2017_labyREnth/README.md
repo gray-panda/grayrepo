@@ -15,21 +15,34 @@ Do note all challenge zip files provided are password protected
 I've managed to complete 1 random challenge, the 5 main tiers and the Boss challenge. Therefore, I will be uploading writeups for these challenges.
 
 **Mobile**
-- [Mobile-1 EzDroid](chal/mob1_ezdroid)
-- [Mobile-2 RouterLocker](chal/mob2_routerlocker)
-- [Mobile-3 showmewhatyougot](chal/mob3_showmewhatyougot)
-- [Mobile-4 AndroidPAN](chal/mob4_androidpan)
-- [Mobile-5 iotctf](chal/mob5_iotctf)
+
+|Challenges|Challenge Type|
+|-------------------------------------------------------|-----------|
+|[Mobile-1 EzDroid](chal/mob1_ezdroid)					|Android APK|
+|[Mobile-2 RouterLocker](chal/mob2_routerlocker)		|MIPS ELF|
+|[Mobile-3 showmewhatyougot](chal/mob3_showmewhatyougot)|iOS App|
+|[Mobile-4 AndroidPAN](chal/mob4_androidpan)			|Android APK with Native Libraries|
+|[Mobile-5 iotctf](chal/mob5_iotctf)					|Docker Image|
 
 **Docs**
-- [Document-1 Findbbz](chal/doc1_findbbz)
-- [Document-2 FindWaldo](chal/doc2_findwaldo)
-- [Document-3 SecretInvite](chal/doc3_secretinvite)
-- [Document-4 macroses](chal/doc4_macroses)
-- [Document-5 MarsSpider](chal/doc5_marsspider)
+
+|Challenges|Challenge Type|
+|---------------------------------------------------|-----------|
+|[Document-1 Findbbz](chal/doc1_findbbz)			|Office Macro|
+|[Document-2 FindWaldo](chal/doc2_findwaldo)		|Office Macro + Automation|
+|[Document-3 SecretInvite](chal/doc3_secretinvite)	|Russian Doll (Outlook msg, pdf, hwp, .Net, USB Pcap)|
+|[Document-4 macroses](chal/doc4_macroses)			|Office MSHTML|
+|[Document-5 MarsSpider](chal/doc5_marsspider)		|Office Macro PW Bypass + Powershell + Bat|
 
 **Binary**
-- Coming Soon
+
+|Challenges|Challenge Type|
+|---------------------------------------------------|-----------|
+|[Binary-1 MyFirstMalware](chal/bin1_myfirstmalware)|x86 PE|
+|[Binary-2 LabyTime](chal/bin2_labytime)			|x86 PE|
+|[Binary-3 LabyrINth](chal/bin3_labyrinth)			|x86 PE + VMWare Hypervisor|
+|[Binary-4 Labyrenth](chal/bin4_labyrenth)			|x64 MACH-O|
+|[Binary-5 Multistage](chal/bin5_multistage)		|x86 PE|
 
 **Threat**
 - Coming Soon
