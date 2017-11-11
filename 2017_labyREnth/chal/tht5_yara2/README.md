@@ -55,7 +55,7 @@ It also matched 16 samples which does not tally with the hints in the instructio
 However, when I tried submitting it to the challenge server, it worked and the flag was returned.  
 Not sure if this is by design or a bug.
 
-Similaryly, at the time of writing this write-up, the solution server seems to be down already.
+Similarly, at the time of writing this write-up, the solution server seems to be down already.
 
 When these 2 rules are submitted in the correct format, the flag is returned.
 

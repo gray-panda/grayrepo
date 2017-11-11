@@ -9,7 +9,8 @@ The interesting code is in "UjRtRQl" file but it is obfuscated
 
 ### De-obfuscating the VBA Macro
 
-I used an old script of mine, [DocumentVariableExtractor.vbs](DocumentVariableExtractor.vbs) to extract the variable "ygsbFH"
+I used an old script of mine, [DocumentVariableExtractor.vbs](DocumentVariableExtractor.vbs) to extract the variable "ygsbFH"  
+Do note that this script requires Microsoft Office installed to work
 
 This variable contains the dictionary that is used to deobfuscate the rest of the code.
 

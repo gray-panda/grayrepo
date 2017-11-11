@@ -53,7 +53,7 @@ Essentially, the code is riddled with syntax errors.
 
 I fixed all the syntax errors in this [python file](crypter.py)
 
-Remember the strang string we saw at the beginning of this challenge?  
+Remember the strange string we saw at the beginning of this challenge?  
 That is actually the flag encrypted with this python encryption.  
 The goal now is to reverse this algorithm and decrypt the flag.
 
@@ -71,7 +71,7 @@ This is what the encryption algorithm do
 Analyzing this algorithm, we know we can recover Chunks 1 till the end.
 - The key for a chunk is the reverse previous chunk
 
-Chunk0 would still need the key to be recovered.
+Chunk 0 would still need the key to be recovered.
 
 After recovering Chunks1 till the end, we see this.
 
@@ -98,16 +98,16 @@ array(8) {
 
 Looks like a flag string, which means the first 4 char should be "PAN{"
 
-Xoring "PAN{" with first 4 bytes of chunk0 will recover the first 4 bytes of the key
+Xoring "PAN{" with first 4 bytes of chunk 0 will recover the first 4 bytes of the key
 - The result is "baby"
 
 Looking through her social media accounts and keeping in mind the key should be 8 chars long
-- Her StackExchange username is "babytoby"
+- Her StackExchange username is "babytoby", let's try that
 	- Decrypting Chunk 0 with that gives "PAN{61dc"
-		- This is the correct key
+		- Bingo, this is the correct key
 
 Combining all the chunks will produce the flag
 
 The flag is **PAN{61dcf45c4ba9286f2edf9f7e2d0def096b903541600624c299a731b8520bdedf}**
 
-I also wrote [soln.php](soln.php) which will perform the decryption as well.
+I wrote [soln.php](soln.php) which will perform the decryption described above.
