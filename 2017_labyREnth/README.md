@@ -45,10 +45,20 @@ I've managed to complete 1 random challenge, the 5 main tiers and the Boss chall
 |[Binary-5 Multistage](chal/bin5_multistage)		|x86 PE|
 
 **Threat**
-- Coming Soon
+
+|Challenges|Challenge Type|
+|---------------------------------------------------|-----------|
+|[Threat-1 Pcap](chal/tht1_pcap)|PCAP Analysis|
+|[Threat-2 Yara 1](chal/tht2_yara1)|Yara rules|
+|[Threat-3 YouWontFindMe](chal/tht3_youwontfindme)|OSINT|
+|[Threat-4 BBRansom](chal/tht4_bbransom)|Office Macro + Powershell|
+|[Threat-5 Yara 2](chal/tht5_yara2)|Yara rules|
 
 **Programming**
-- Coming Soon
+
+|Challenges|Challenge Type|
+|---------------------------------------------------|-----------|
+|[Programming-1 maze](chal/prog1_maze)|Programming (Dijkstra)|
 
 **Boss**
 - Coming Soon

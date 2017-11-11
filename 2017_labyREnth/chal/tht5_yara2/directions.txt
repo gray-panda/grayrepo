@@ -1,0 +1,82 @@
+netcat your answer to 34.208.93.211:8082
+The first YARA challenge had you create a rule for what is called an "anchor function".
+For this challenge you are going to create 2.
+
+Given the included archive of malware samples:
+Find 2 of the longest, contiguous, most efficient rules to catch all of them.
+The rules must use the hexadecimal format. 
+The rules CANNOT fire on any other samples. ONLY the 36 provided.
+The wildcard ("?" or "??") is allowed but not jumps "[1-6]". See http://yara.readthedocs.io/en/latest/writingrules.html#hexadecimal-strings 
+The samples are included in yara_samples.7z password is "infected"
+
+The rule must follow this example format:
+
+rule yara_challenge
+{
+	strings:
+		$yara_challenge01 = { de ad b? ef ?? ?? }
+		$yara_challenge01 = { ca fe ?? ?? ba ?e }
+	condition:
+		 all of them 
+}
+
+You will change the contents to a hex formatted rule that will catch all 36 samples.
+
+Use this template when submitting your rule:
+
+rule yara_challenge
+{
+	strings:
+		$yara_challenge01 = { ** ** ** ** ** ** }
+		$yara_challenge02 = { ** ** ** ** ** ** }
+	condition:
+		 1 of them 
+}
+
+
+Hints:
+There are 6 wildcard "?"'s within one rule.
+There are 158 wildcard "?"'s within the other rule.
+
+There will be samples that have both anchor functions.
+
+One anchor function must cover 34 of the 36 samples 
+The other must cover 12 of the 36 samples.
+
+Malware samples have the following sha256 hashes:
+06a778a1f55e15c880628f2c20db930d6657dc8225a0527f0f044d88f8e9199d
+0c5e0a81efc0ccc406e5e6eaa222a79b491f4aa2938cf7cc72d0d027b53a9d99
+0e4a486d437e01246176d776b6e36ed7582e19c05d382723dd47936a980cf60f
+1298d735d749aeefd65e82f70f2f5297c0b6b1f3ab40b5f0e3f4a9d4b9ac205a
+1cac65457b368cfcf2d9686d2b2f393445ef85f9939c1364c7567296f9e0168f
+229dfa6c98c28001f7fd55f484c800c9fb78185ad7ca369b982afc576162efaf
+4045a7d0d667a88eb1d260e860630d0dc04924b8eb22189a04bd5a76d7f2f672
+480b0eb4636d6a78b62e7b52b773ec0a4e92fe4a748f9f9e8bd463a3b8dd0d83
+48c48992b1bd875e3127198dd11ad47e5f52920d4efc399468fe80b5f5f1f243
+4c2295164e2decffbe9d8b04d634a8c6ddb6eec2ce37ff7110ca892aae4b92a9
+4df98c74bdda906fb96368cc8720e3396b9a942c2eba253f068354fb466e4f93
+5831251b46c6bb10b3c5d4afeb4827ac6dfaabdc3553cf57003237596316738b
+60f6b76713b6c1e7636d4980cfe15719df4fc5358b24e5151b1fe15e7aee0c39
+6188c3940125e868af3e5fcf894cd890fa45dece36cfae27634e0b249ed607de
+6b0551c4912e098afa0c72264fc5df9a2b21995436e15ed4a3c1fff06ef4cee3
+73cbbd5f032e58088a1be5e567a7280dc648a09d7bf1975b39e875e69c6e953a
+7af531b447401bea9f5f37070cc7221f25bd2caf8385371f10886cb781efbc94
+8b92700bac3150d3456697b64e63d21f8ca4447df57d02c7f90125c3068985d7
+8e17182341f1b454f909550cc8fdb9e4cf4905459050fb29e5edcc749509f9e2
+9073062cd0cec4680ef9e708f25e6e4f7a51fe60fd5583aa9a7dedde7e7f04d4
+99010bc0fa1ceae22dfc1b69b2b6e3a75895b1bc13d7d08241fb8b9695425950
+9fd421a833657523fb17ffad1d17e005c77258640dd2b9f34c27e19880cb0e0a
+a81057e06bddc2bfdcd0bae8f3ed101a47e926f3d37a7f0f0378a89049725dc7
+ab8ccce57d23aebc915265a955ceeca1e2f5ab98020cb39ff1b6b2699c72f25a
+cde3f9982eb947b60a664fcaec1961bac4d2b077854307a4c7631b3793dc9346
+cfc4b4ee6d40834a87e7da14cd2dd55223fd7d6f88c4c8e26efb1412e8c1b6e3
+d0793f7d7eba2c3d4e5159943ef5454893f7b3c5625d33ecdf5fccd34d3fe878
+d5d7047c1055dd9f71517c3f1d17a1a442c5f681cdb22fcc100d123bc9a30882
+dce7c3637e83e574dbf6228cd95a7862ffee934ed65402ff212fb387c1c8d765
+e16d5a3d347ea2bcf92deda1f7af5f102824b45f1b4aa1e9f51f05a73dd58ef2
+e2d0a284264de14df5c5c3d242a715ca4fa0022714373ad7247f7a1ba8d78a22
+e43156b14dcc2a5efbdd87268d3f2b6eb340d9ac8490fe9f6d657b268207a9ad
+e57b24d962c8a90eb5ab98d9594d7ea077609227565beebef04c2af3cb111df5
+e9c59ea1831d1b64aa14523248ca4b27921305ea882a768a041e52ab362fe4cf
+f3bead73da9052e2ce3703a12b7a66da0e3c95b8969389fff0c459af43ef5c20
+f96c267f3dd838a8bb08d4e8150d1a7535888800098bd40fbbdfe953ec2b01b1
