@@ -81,27 +81,34 @@ Also higher levels will have a smaller sample size so that it is harder to figur
 
 After fiddling with it for a little bit, I concluded that there are 8 data types that can be used to form the DGA
 
-- Boolean Bit
-	- Keyspace: 01
-- Boolean Char
-	- Keyspace: TF
-- Day_FirstChar
-	- First character of the day ('M' for 'Monday', etc...)
-	- Keyspace: MTWFS
-- Month_LastChar
-	- Last character of the month ('y' for 'January')
-	- Keyspace: yhletr
-- Digits_01789
-	- The number at the "Ten" position of the year ('8' for 1986, '1' for 2017)
-	- Keyspace: 01789
-- Hex
-	- Keyspace: 0123456789ABCDEF
-- DNA
-	- Keyspace: ACGT
-- Periodic Table
-	- First 31 elements on the Periodic table + 'Nu' for element 0
-	- Basically a way to represent a base32 number
-	- Keyspace: Nu H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga
+**Boolean Bit**
+- Keyspace: 01
+
+**Boolean Char**
+- Keyspace: TF
+
+**Day_FirstChar**
+- First character of the day ('M' for 'Monday', etc...)
+- Keyspace: MTWFS
+
+**Month_LastChar**
+- Last character of the month ('y' for 'January')
+- Keyspace: yhletr
+
+**Digits_01789**
+- The number at the "Ten" position of the year ('8' for 1986, '1' for 2017)
+- Keyspace: 01789
+
+**Hex**
+- Keyspace: 0123456789ABCDEF
+
+**DNA**
+- Keyspace: ACGT
+
+**Periodic Table**
+- First 31 elements on the Periodic table + 'Nu' for element 0
+- Basically a way to represent a base32 number
+- Keyspace: Nu H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga
 	
 The general DGA works in the following way
 - Converts the timestamp into its binary string form (e.g. '011010111001011...')
@@ -111,39 +118,47 @@ The general DGA works in the following way
 	- Some DataTypes will consume bits from the binary string while others is just some information from the date created from the timestamp
 	- The generated URL (xxx) is appended to look like this "http://xxx.dgeh"
 
-Our program has to analyze the samples given and determine what DataTypes are used and in which order they are used in the DGA
+Our program has to analyze the samples given and determine what DataTypes are used and in which order they are used
 	
 After analyzing many samples, this is what each DataType will do to the timestamp binary string
-- Boolean Bit (01)
-	- Consumes 3 bits 
-	- Performs a bitwise AND of all 3 bits
-	- Appends the resulting bit (0 or 1) to the url
-- Boolean Char (TF)
-	- Consumes 1 bit
-	- Appends the correspoding char to the url (T for 1, F for 0)
-- Day_FirstChar (MTWFS)
-	- Does not consume any bits
-	- Appends the first character of the day ('M' for 'Monday', etc...) to the url
-- Month_LastChar (yhletr)
-	- Does not consume any bits
-	- Appends the last character of the month ('y' for 'January') to the url
-- Digits_01789 (01789)
-	- Does not consume any bits
-	- Appends the number at the "Ten" position of the year plus a '0' to the url ('80' for 1986, '10' for 2017)
-- Hex (0123456789ABCDEF)
-	- Consumes 4 bits
-	- Convert the 4 bits into its Hex representation and append it to the url
-- DNA (ACGT)
-	- Consumes 2 bits
-	- Convert the 2 bits into its decimal equivalent (0,1,2,3)
-	- Each of the possible numbers are assigned to a DNA Seqeuence character randomly for each question
-		- Have to analyze each question's samples to figure out the number order of the sequence.
-	- Appends the DNA character
-- Periodic Table (Nu H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga)
-	- Consumes 5 bits
-	- Convert the 5 bits into its decimal equivalent (0-31) hence its a base32 number
-	- Translate the number into its associated chemical name in the Periodic Table	
-		- The number is the periodic number. (except 0 will give 'Nu')
+
+**Boolean Bit** (01)
+- Consumes 3 bits 
+- Performs a bitwise AND of all 3 bits
+- Appends the resulting bit (0 or 1) to the url
+
+**Boolean Char** (TF)
+- Consumes 1 bit
+- Appends the correspoding char to the url (T for 1, F for 0)
+
+**Day_FirstChar** (MTWFS)
+- Does not consume any bits
+- Appends the first character of the day ('M' for 'Monday', etc...) to the url
+
+**Month_LastChar** (yhletr)
+- Does not consume any bits
+- Appends the last character of the month ('y' for 'January') to the url
+
+**Digits_01789** (01789)
+- Does not consume any bits
+- Appends the number at the "Ten" position of the year plus a '0' to the url ('80' for 1986, '10' for 2017)
+
+**Hex** (0123456789ABCDEF)
+- Consumes 4 bits
+- Convert the 4 bits into its Hex representation and append it to the url
+
+**DNA** (ACGT)
+- Consumes 2 bits
+- Convert the 2 bits into its decimal equivalent (0,1,2,3)
+- Each of the possible numbers are assigned to a DNA Seqeuence character randomly for each question
+	- Have to analyze each question's samples to figure out the number order of the sequence.
+- Appends the DNA character
+
+**Periodic Table** (Nu H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga)
+- Consumes 5 bits
+- Convert the 5 bits into its decimal equivalent (0-31) hence its a base32 number
+- Translate the number into its associated chemical name in the Periodic Table	
+	- The number is the periodic number. (except 0 will give 'Nu')
 		
 ### Solution
 
@@ -190,7 +205,7 @@ My algorithm is as follows
 - Submit the answer
 - Repeat till the flag appears
 
-There are 2 main complex logic that is addressed in my solution
+In addition, there are 2 main complex logic that is addressed in my solution
 
 1) Order of the DNA Characters
 	- The order is not fixed, it is chosen randomly for each question
@@ -216,8 +231,8 @@ There are 2 main complex logic that is addressed in my solution
 			- If the confusing case appears, it will assume it to be Periodic + MonthLastChar DataType instead
 			- Clear the error flag
 			
-My solution is not perfect as it only handles 1 clashing scenario.  
-It may takes a few run of my solution script [soln.php](soln.php) to get the flag  
+This solution is not perfect as it only handles 1 clashing scenario.  
+It may takes a few run of the solution script [soln.php](soln.php) to get the flag  
 There are more clashing scenarios, but this scenario seems to happen the most frequently.
 
 Also, the later questions have a much smaller sample space (the last question only has 10 samples)  
@@ -226,10 +241,9 @@ The solution have to try and determine the format with minimal information
 It is also possible that the sample size is just too small and the format too confusing to generate a proper format.  
 In that case, run the solution script again and hope that the new samples are more adequate or the format is less confusing
 
-If you are lucky, running the solution script should get you the flag.
-If not, run it a few more times.
+Eventually, running the solution script should get you the flag.
 
-My solution contains 2 scripts
+My solution contains 2 main scripts
 - soln.php
 	- Does the socket connections to the server and calls functions from the library script "dgeh.php"
 - dgeh.php
@@ -240,7 +254,6 @@ My solution contains 2 scripts
 			- Prints out the analyzed format and data in a table form for me to view
 			- Will fail if the sample urls produces the clash described above
 
-As of the writing of this article, the challenge server seems to be down.  
 After solving 5 questions, the flag is revealed
 
 The following is the output of a successful run of the script

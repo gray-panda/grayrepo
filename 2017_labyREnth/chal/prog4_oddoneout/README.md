@@ -3,6 +3,8 @@
 
 The challenge instructs us to connect to http://oott.panspacedungeon.com:16000/play/new/None to play a game
 
+As of the writing of this article, the challenge server seems to be down.  
+
 The challenge server will present us with a table of values.  
 We have to analyze this table and select the row which is the "odd one out"
 
@@ -228,7 +230,7 @@ Example
 
 ### Evaluating shellcode
 
-The shellcode question is hardest to solve as we need to interpret this shellcode and pseudo-execute it to get the EAX value
+The shellcode question is hardest to solve as we need to interpret this shellcode and execute it to get the EAX value
 
 I downloaded the [shellcode-launcher](https://github.com/clinicallyinane/shellcode_launcher) project  
 I made some modification so it will print out the return value "EAX" after the function call
@@ -246,7 +248,7 @@ DWORD fk = callLoc();
 printf("%08x\n", fk);
 ```
 
-I compiled it into an [exe](shellcode_launcher.exe).  
+It is then compiled into an [exe](shellcode_launcher.exe).  
 
 Usage
 
@@ -259,11 +261,9 @@ shellcode_launcher.exe -i shellcode.bin > output
 Do note that this exe is not perfect.  
 Sometimes, it interprets the shellcode differently from what the challenge server expects
 
-I wrote the [solution script](soln.php) which will talk to the challenge server, compute and answer all these questions.  
+The [solution script](soln.php) will talk to the challenge server, compute and answer all these questions.  
 Obviously, this script can only run on Windows as it depends on an "exe" file.
 
 The flag is revealed after answering 128 questions correctly in a row
-
-As of the writing of this article, the challenge server seems to be down.  
 
 The flag is **PAN{8a1f7919eda0bd55db89d2eff45f420d84ec67c3715ab0c53bc8db7b1762cd54}**
