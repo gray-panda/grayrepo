@@ -1,0 +1,18 @@
+Hmm we found another DGA, can you figure out the next one?
+
+Here's the data that we got:
+
+(530908157, '1986/10/28 18:29:17', 'http://80T0FCBTNuPr.dgeh')
+(729015162, '1993/02/06 16:12:42', 'http://90T06AKSNiAly.dgeh')
+(238905519, '1977/07/28 02:38:39', 'http://70T0CCCuTAlHey.dgeh')
+(1094195149, '2004/09/03 07:05:49', 'http://00C02CCrFHeGar.dgeh')
+(1478756561, '2016/11/10 05:42:41', 'http://10C00CBeTHLir.dgeh')
+(25909936, '1970/10/27 21:12:16', 'http://70T03TNaTNaNer.dgeh')
+(140916893, '1974/06/19 23:34:53', 'http://70T00ACWNHee.dgeh')
+(919394288, '1999/02/19 03:18:08', 'http://90T0DGMgFFeGay.dgeh')
+(407758713, '1982/12/03 10:18:33', 'http://80T00GAlFNiCur.dgeh')
+(843251977, '1996/09/20 20:39:37', 'http://90T04GLiFNuBer.dgeh')
+
+And here's the one we need:
+(1529078400, '2018/06/15 16:00:00', '?')
+

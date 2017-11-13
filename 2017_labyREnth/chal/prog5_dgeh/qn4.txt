@@ -1,0 +1,28 @@
+Hmm we found another DGA, can you figure out the next one?
+
+Here's the data that we got:
+
+(427882628, '1983/07/24 08:17:08', 'http://yATCTS0SFC280.dgeh')
+(404007694, '1982/10/21 00:21:34', 'http://rATCAHe0TACC80.dgeh')
+(1355023919, '2012/12/09 03:31:59', 'http://rTTAACr0S0T810.dgeh')
+(594060899, '1988/10/28 16:54:59', 'http://rACAGAl0FAT980.dgeh')
+(280578759, '1978/11/22 10:32:39', 'http://rATAAV0W4CB70.dgeh')
+(807356613, '1995/08/02 09:43:33', 'http://tAGAALi1W4C390.dgeh')
+(941099342, '1999/10/28 08:29:02', 'http://rAGCALi0T0C590.dgeh')
+(490380905, '1985/07/16 16:55:05', 'http://yATGTN0T9G980.dgeh')
+(50555122, '1971/08/09 03:05:22', 'http://tAAAGNu0M6C370.dgeh')
+(1466736227, '2016/06/24 02:43:47', 'http://eTTTGAl0F9G910.dgeh')
+(1262652158, '2010/01/05 00:42:38', 'http://yTACGO0T8CB10.dgeh')
+(1365806295, '2013/04/12 22:38:15', 'http://lTTATAl0F8G310.dgeh')
+(1057668871, '2003/07/08 12:54:31', 'http://yAGGGH0TBGC00.dgeh')
+(1247439478, '2009/07/12 22:57:58', 'http://yTACCNa0S6C900.dgeh')
+(403473751, '1982/10/14 20:02:31', 'http://rATCAH0T8T580.dgeh')
+(901305086, '1998/07/24 18:31:26', 'http://yAGTTV0FDAB90.dgeh')
+(468265687, '1984/11/02 17:48:07', 'http://rATCGCu0F2CB80.dgeh')
+(52029854, '1971/08/26 04:44:14', 'http://tAAAGLi0TEC670.dgeh')
+(596687728, '1988/11/28 02:35:28', 'http://rACAGAr0MBCD80.dgeh')
+(661938024, '1990/12/23 07:40:24', 'http://rACTGSi0S5GD90.dgeh')
+
+And here's the one we need:
+(1529078400, '2018/06/15 16:00:00', '?')
+

@@ -58,10 +58,20 @@ I've managed to complete 1 random challenge, the 5 main tiers and the Boss chall
 
 |Challenges|Challenge Type|
 |---------------------------------------------------|-----------|
-|[Programming-1 maze](chal/prog1_maze)|Programming (Dijkstra)|
-
-**Boss**
-- Coming Soon
+|[Programming-1 Maze](chal/prog1_maze)|Programming (Dijkstra)|
+|[Programming-2 Connect4](chal/prog2_connect4)|Programming (Connect 4)|
+|[Programming-3 3DMaze](chal/prog3_3dmaze)|Programming (Maze)|
+|[Programming-4 OddOneOut](chal/prog4_oddoneout)|Programming (Parsing and Analysis)|
+|[Programming-5 DGEH](chal/prog5_dgeh)|Programming (DGA Analysis)|
 
 **Random**
-- Coming Soon
+
+|Challenges|Challenge Type|
+|---------------------------------------------------|-----------|
+|[Random Cake](chal/rand_cake)|Packet Analysis (HTTP2)|
+
+**Boss**
+
+|Challenges|Challenge Type|
+|---------------------------------------------------|-----------|
+|[Final Boss](chal/zBoss)|Debugger Scripting|
