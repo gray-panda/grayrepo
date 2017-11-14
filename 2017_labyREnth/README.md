@@ -12,7 +12,12 @@ It also has a Random tier which are hidden all over the challenge map
 Do note all challenge zip files provided are password protected
 - Default pw is "labyrenth" unless otherwise stated
 
-I've managed to complete 1 random challenge, the 5 main tiers and the Boss challenge. Therefore, I will be uploading writeups for these challenges.
+I've managed to complete 1 random challenge, the 5 main tiers and the Boss challenge.  
+Therefore, I will be uploading writeups for these challenges.
+
+![status2](status2.jpg)
+
+![status1](status1.jpg)
 
 **Mobile**
 
@@ -74,4 +79,12 @@ I've managed to complete 1 random challenge, the 5 main tiers and the Boss chall
 
 |Challenges|Challenge Type|
 |---------------------------------------------------|-----------|
-|[Final Boss](chal/zBoss)|Debugger Scripting|
+|[Final Boss](chal/zboss)|Debugger Scripting|
+
+**Prizes**
+
+Big Thanks to the Palo Alto Network peeps for these amazing prizes :)
+
+![prize1](prize1.jpg)
+
+![prize2](prize2.jpg)

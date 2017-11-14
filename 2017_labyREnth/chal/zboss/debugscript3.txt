@@ -1,0 +1,205 @@
+//msg "WTF"
+
+// find base address and the starting call
+rtu
+$base = mem.base(cip)
+$startcall = $base + 0xc50b
+
+// clear breakpoints
+bc
+bphwc
+
+bp $startcall
+erun
+bc
+sti
+$level = 0
+
+// Inside A level
+LevelStart:
+$level++
+sti
+find cip, "E8????FFFF"
+cmp $result,0
+je error1
+bp $result
+erun
+bc
+st
+find cip, "E8????FFFF"
+cmp $result,0
+je error1
+bp $result
+erun
+bc
+sti
+
+// Inside variable check area
+FindVariables:
+find cip, "85c0" // Find test eax, eax
+cmp $result,0
+je IsItFinished
+AAATestStart:
+$aaatest = ReadByte($result-2)
+log {$aaatest}
+cmp $aaatest, 0xff
+je AAATestPass
+$result = $result-1
+jmp AAATestStart
+
+AAATestPass:
+bp $result-2
+erun
+bc
+
+// Grab strings that we wan
+$nameptr = [csp]
+st // stepover the GetEnvironmentVariable call
+// Check return result, if not 0, go to next level
+cmp eax,0
+jne GoNextLevel
+// Get the instructon 4 instructions later
+find cip, "3a"
+cmp $result,0
+je error2
+$tmpaddr = $result
+$tmplen = dis.len($tmpaddr)
+cmp $tmplen, 7
+je Compare7
+cmp $tmplen, 4
+je Compare4
+jmp alldone
+
+Compare7:
+$myaddr = $tmpaddr+3
+$valoffset = [$myaddr]
+$valptr = csp+valoffset
+jmp CompareDone
+
+Compare4:
+$myaddr = $tmpaddr+3
+$valoffset = ReadByte($myaddr)
+$valptr = csp+valoffset
+jmp CompareDone
+
+CompareDone:
+log {$valptr}
+log "Level {d:level} {s:$nameptr} = {s:$valptr}"
+st
+st
+
+// Checking ending conditions
+$endcheck = ReadWord(cip+3)
+cmp $endcheck, 0x16a // if is push 1, ended
+jne FindVariables
+jmp alldone
+
+GoNextLevel:
+//cmp $level, 5
+//je CompleteMission // don't go deeper than 9 levels
+st // step over the test instruction
+find cip, "83??10" // finds the cmp exx, 10
+FindTruePath:
+cmp $result,0
+je error3
+bp $result
+erun
+bc
+st
+$gohere = dis.brtrue(cip)
+// Compare target destination and current eip, if going back => wrong target
+cmp $gohere, cip
+jge TruePathFound
+$falsepathlen = dis.len(cip)
+find cip+$falsepathlen, "83??10" // finds the cmp exx, 10
+jmp FindTruePath
+
+TruePathFound:
+bp $gohere
+erun
+bc
+
+find cip, "6a01" // finds the next push 1
+Test1:
+cmp $result,0
+je error3
+// Double check that the 6a01 is correct, next byte is not 00
+$testerbyte = ReadByte($result+2)
+cmp $testerbyte, 0
+jne test1Found
+find $result+2, "6a01"
+jmp Test1
+
+test1Found:
+$previnst = dis.prev($result)
+log {$previnst}
+bp $previnst
+erun
+bc
+st
+
+TryAgain: // Step until the "call exx" instruction
+$curinstbyte = ReadByte(cip)
+cmp $curinstbyte, 0xff
+je CallEXXFound
+st
+jmp TryAgain
+
+CallEXXFound:
+sti // step into next level
+jmp LevelStart
+
+
+IsItFinished:
+// Go to the 3rd call exx?
+find cip, "FFD?"
+cmp $result, 0
+je error4
+bp $result
+erun
+bc
+st
+find cip, "FFD?"
+cmp $result, 0
+je error4
+bp $result
+erun
+bc
+st
+find cip, "FFD?"
+cmp $result, 0
+je error4
+bp $result
+erun
+bc
+st
+find cip, "FFD?"
+cmp $result, 0
+je error4
+bp $result
+erun
+bc
+log "Final Decrypted: {s:csp+4}"
+jmp alldone
+
+error1:
+msg "Error1"
+jmp alldone
+
+error2:
+msg "Error2"
+jmp alldone
+
+error3:
+msg "Error3"
+jmp alldone
+
+error4:
+msg "Error4"
+jmp alldone
+
+CompleteMission:
+log "MissionComplete"
+
+alldone:
+ret
