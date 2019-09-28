@@ -38,7 +38,7 @@ The first part of the code does the usual malware function finding technique
 
 I am no 3D graphcis expert but this is what I figured out
 
-The actual drawing code starts at 0x420155 with a call into the drawing function (0x42038A)
+The actual drawing code starts at 0x420155 with a call into the drawing function (0x42038A)  
 This is the gist of what the drawing function does
 
 ```

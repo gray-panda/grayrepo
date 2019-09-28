@@ -9,10 +9,10 @@ Initially, I used dnSpy (v6.0.5) to decompile the binary and try to debug it.
 However, it crashed in the **Program.Init()** function.  
 When I used an older version of dnSpy (v5.0.7) on the same machine, it was able to debug it without crashing.
 
-My friends used different versions and different environments for it to debug successfully.  
-I'm not sure what the exact reason was but I'm guessing its a version mismatch of some DLL or system configuration.  
-This is because the **Program.Init()** function tries to find stuffs at hard-coded address offsets.  
-I did not investigate much as I got it to work on a older dnSpy and I continued reversing
+My friends had lots of difficulty trying to debug this    
+I'm not sure what the exact reason was but some friends said that it is some Confuser packing that needs to be bypassed  
+I did not investigate much as I got it to work on a older dnSpy and I continued reversing  
+Although, if it is really Confuser, I'm interested to find out why my older dnSpy was able to debug it.
 
 ### Steganography
 

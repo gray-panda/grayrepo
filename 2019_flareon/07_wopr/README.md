@@ -35,7 +35,7 @@ for chuck in face:
 ```
 
 Each Tab (0x9) represents bit 0 and each Space (0x32) represents bit 1  
-The decompilation process actually destroys the Tabs in the docstring, so I extracted the docstring from the compiled pyc file into a [file](face.docstring) for easier processing.  
+The decompilation process actually destroys the Tabs in the docstring, so I extracted the docstring from the compiled pyc file into a [file](face_docstring) for easier processing.  
 I changed the unpacking code to read in this file instead and unpack the next stage.  
 There is a copy of this in [stage2.py](stage2.py)
 
@@ -46,7 +46,7 @@ Analyzing the next stage, I figured out that the key to decrypt the flag is depe
 The **wrong** function parses the PE structure to basically do the following
 - Get the base address of the executable into the **trust** variable
 - Extracts the .text section into the **spare** variable
-- Extracts the .reloc section into the **trust** variable
+- Extracts the .reloc section into the **truth** variable
 - Parses the .reloc data and "relocate" pointers inside the .text section
   - relocates them by subtracting base address of the executable from the pointers
   - essentially they are "relocated" to direct offsets from the base of the exe
