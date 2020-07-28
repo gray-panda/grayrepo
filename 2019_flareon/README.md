@@ -4,7 +4,7 @@ Challenge site @ http://2019.flare-on.com
 
 This was a 6 weeks long reverse engineering centric CTF created by FireEye
 
-It consists of a single track of 12 challenges.  
+It consists of a single track of 12 challenges.
 Each challenge have to be completed before gaining access to the next.
 
 All challenge zip files can be downloaded from the [official site](http://flare-on.com/files/Flare-On6_Challenges.zip)
@@ -27,3 +27,7 @@ Do note all challenge zip files provided are password protected (pw is "flare")
 |[12-help](12_help)			        |Kernel Crash Dump Analysis + x64 PE	|
 
 Winners listed at [http://flare-on.com/2019.html](http://flare-on.com/2019.html)
+
+Received this nice medal for completing all 12 challenges in this CTF
+
+![prize](prize.jpg)

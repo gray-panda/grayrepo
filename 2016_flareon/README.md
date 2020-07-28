@@ -19,3 +19,7 @@ Do note all challenge zip files provided are password protected (pw is "infected
 - [08-chimera](chal08_chimera)
 - [09-gui](chal09_gui)
 - [10-flava](chal10_flava)
+
+Received this nice badge for completing all levels in this CTF
+
+![prize](prize.jpg)
