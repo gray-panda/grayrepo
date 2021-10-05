@@ -28,3 +28,7 @@ Do note all challenge zip files provided are password protected (pw is "flare")
 Password to any other encrypted zip files here will be either "flare" or "infected"
 
 Winners will be listed at [flare-on.com](http://flare-on.com/)
+
+Received this nice swag for completing all levels in this CTF
+
+![prize](prize.jpg)
