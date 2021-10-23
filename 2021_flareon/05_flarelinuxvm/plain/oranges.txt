@@ -1,0 +1,1 @@
+The 8th byte of the password is: 0x60

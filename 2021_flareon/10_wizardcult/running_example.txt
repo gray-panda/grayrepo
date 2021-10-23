@@ -1,0 +1,86 @@
+I cast Feather Fall on the Wyvern for 76d40 damage!
+I cast Bestow Curse on the Wyvern for 28d77 damage!
+I cast Dancing Lights on the Wyvern for 4d34 damage!
+I cast Ray of Sickness on the Wyvern for 33d139 damage!
+I cast Arcane Lock on the Wyvern for 124d105 damage!
+I cast Staggering Smite on the Wyvern for 209d129 damage!
+I cast Chill Touch on the Wyvern for 54d223 damage!
+I cast Goodberry on the Wyvern for 4d155 damage!
+I cast Thorn Whip on the Wyvern for 241d177 damage!
+I cast Sending on the Wyvern for 157d229 damage!
+I cast False Life on the Wyvern for 156d14 damage!
+I cast Calm Emotions on the Wyvern for 178d143 damage!
+I cast Mass Heal on the Wyvern for 39d204 damage!
+I cast Aid on the Wyvern for 82d153 damage!
+I cast Mirage Arcane on the Wyvern for 222d55 damage!
+I cast Augury on the Wyvern for 128d92 damage!
+I cast Augury on the Wyvern for 47d10 damage!
+I cast Time Stop on the Wyvern for 127d253 damage!
+I cast Antimagic Field on the Wyvern for 249d84 damage!
+I cast Longstrider on the Wyvern for 37d81 damage!
+I cast Prestidigitation on the Wyvern for 255d222 damage!
+I cast Transport via Plants on the Wyvern for 172d9 damage!
+I cast Wind Wall on the Wyvern for 234d179 damage!
+I cast Mirror Image on the Wyvern for 255d174 damage!
+I cast Illusory Script on the Wyvern for 210d211 damage!
+I cast Arcane Gate on the Wyvern for 253d221 damage!
+I cast Remove Curse on the Wyvern for 55d144 damage!
+I cast Hellish Rebuke on the Wyvern for 137d114 damage!
+I cast Cloud of Daggers on the Wyvern for 45d22 damage!
+I cast Prayer of Healing on the Wyvern for 67d162 damage!
+I cast Heat Metal on the Wyvern for 55d25 damage!
+I cast Phantasmal Force on the Wyvern for 92d231 damage!
+I cast Darkness on the Wyvern for 211d166 damage!
+I cast Nondetection on the Wyvern for 208d11 damage!
+I cast Create Undead on the Wyvern for 35d183 damage!
+I cast Imprisonment on the Wyvern for 80d236 damage!
+I cast Speak with Plants on the Wyvern for 55d75 damage!
+I cast Dissonant Whispers on the Wyvern for 186d72 damage!
+I cast Vampiric Touch on the Wyvern for 97d71 damage!
+I cast Blade Barrier on the Wyvern for 247d202 damage!
+I cast Wind Wall on the Wyvern for 255d149 damage!
+I cast Silence on the Wyvern for 33d99 damage!
+I cast Power Word Heal on the Wyvern for 164d236 damage!
+I cast Blade Ward on the Wyvern for 237d91 damage!
+I cast Teleportation Circle on the Wyvern for 221d122 damage!
+I cast Commune with Nature on the Wyvern for 86d244 damage!
+I cast True Strike on the Wyvern for 164d54 damage!
+I cast Weird on the Wyvern for 224d32 damage!
+I cast Stone Shape on the Wyvern for 222d160 damage!
+I cast See Invisibility on the Wyvern for 137d55 damage!
+I cast Passwall on the Wyvern for 194d254 damage!
+I cast Dominate Monster on the Wyvern for 15d207 damage!
+I cast Bless on the Wyvern for 189d107 damage!
+I cast Fear on the Wyvern for 219d151 damage!
+I cast Meteor Swarm on the Wyvern for 127d74 damage!
+I cast Destructive Wave on the Wyvern for 198d217 damage!
+I cast Flame Blade on the Wyvern for 33d128 damage!
+I cast Conjure Celestial on the Wyvern for 184d4 damage!
+I cast Friends on the Wyvern for 58d58 damage!
+I cast Aura of Life on the Wyvern for 75d19 damage!
+I cast Flesh to Stone on the Wyvern for 106d19 damage!
+I cast Blinding Smite on the Wyvern for 234d59 damage!
+I cast Commune with Nature on the Wyvern for 221d105 damage!
+I cast Flaming Sphere on the Wyvern for 67d233 damage!
+I cast Fire Shield on the Wyvern for 220d210 damage!
+I cast Antilife Shell on the Wyvern for 252d58 damage!
+I cast Fireball on the Wyvern for 207d140 damage!
+I cast Heal on the Wyvern for 99d124 damage!
+I cast Web on the Wyvern for 231d165 damage!
+I cast Speak with Plants on the Wyvern for 240d239 damage!
+I cast Resistance on the Wyvern for 136d251 damage!
+I cast Barkskin on the Wyvern for 108d143 damage!
+I cast Burning Hands on the Wyvern for 141d198 damage!
+I cast Dispel Magic on the Wyvern for 105d145 damage!
+I cast Darkness on the Wyvern for 107d110 damage!
+I cast Vicious Mockery on the Wyvern for 185d174 damage!
+I cast Regenerate on the Wyvern for 148d27 damage!
+I cast Telekinesis on the Wyvern for 26d60 damage!
+I cast Eyebite on the Wyvern for 67d72 damage!
+I cast Create Undead on the Wyvern for 142d240 damage!
+I cast Remove Curse on the Wyvern for 48d165 damage!
+I cast Prestidigitation on the Wyvern for 234d54 damage!
+I cast Major Image on the Wyvern for 232d227 damage!
+I cast Continual Flame on the Wyvern for 47d117 damage!
+I cast Weird on the Wyvern for 214d123 damage!
+I cast Blade Barrier on the Wyvern!

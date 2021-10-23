@@ -1,0 +1,3 @@
+It seems you are close to escape... We are preparing the tomatoes to throw at you when you open the door! It is only a joke...
+The 11th byte of the password is the number of unique words in /etc/Quijote.txt
+The 13th byte of the password is revealed by the FLARE alias
