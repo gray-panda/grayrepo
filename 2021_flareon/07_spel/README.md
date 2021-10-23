@@ -202,7 +202,7 @@ The switch case will basically xor decrypt some data using the key **"l3rlcps_7r
 
 ![dis13](img/26.png)
 
-The result is then saved into the same registry key as before with the name "1"
+The result is then saved into the same registry key as before with the name "0"
 
 Let's look at the registry key
 
