@@ -156,7 +156,7 @@ I wanted a way where it could run the binary and just print out all the instruct
 
 ## Python Debugger (py3dbg)
 
-A friend recommended the [py3dbg](https://pypi.org/project/py3dbg/)project to me  
+A friend recommended the [py3dbg](https://pypi.org/project/py3dbg/) project to me  
 This project provides a Python interface to debug x64 binaries, allowing me to program and automate the debugging process to a certain extent
 
 Unfortunately, this project is not very well maintained.  
