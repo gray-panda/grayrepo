@@ -157,7 +157,7 @@ These are the findings of my initial recon into the binary
 At this point, there were so many unknowns, I decided to focus on what the binary does after receiving the 2 0x30 byte chunks from the server
 ## Big Numbers
 
-It was a pain to debug was there were lots of nested function calls to perform very simple tasks  
+It was a pain to debug as there were lots of nested function calls to perform very simple tasks  
 The main function that I investigated was at this address (ignore the renamed function name for now)
 
 ![addr](img/07.png)
@@ -238,7 +238,7 @@ I added the following code to my test project
    Console.WriteLine("Encrypted Message: " + BitConverter.ToString(encryptedMessage));
 ```
 
-I regenerated the signature and loaded it into IDA.
+I regenerated the signature and loaded it into IDA  
 Now it makes more sense
 
 ![hmm2](img/14.png)
@@ -277,7 +277,7 @@ Sagemath calculated the order of this specific curve to be 309373396510199458922
 
 ![notaprime](img/26.png)
 
-This reminded me of a similar [Diffie-Hellman challenge in a Flare-on]() many years ago and I started looking into Pohlig Hellman attacks
+This reminded me of a similar [Diffie-Hellman challenge in a Flare-on](https://github.com/gray-panda/grayrepo/tree/master/2016_flareon/chal10_flava#breaking-the-diffie-hellman) many years ago and I started looking into Pohlig Hellman attacks
 ## Pohlig Hellman Attack
 
 I found a [pohlig hellman sagemath script for EC](https://github.com/pwang00/Cryptographic-Attacks/blob/master/Public%20Key/Diffie%20Hellman/pohlig_hellman_EC.sage)
@@ -294,7 +294,7 @@ In the end, while I was arguing with ChatGPT, it gave me an interesting idea
 
 Instead of calculating the discrete log of the last huge prime factor, we could ignore it and then build in a small brute-force at the end of the script
 
-Here is what I modified in my [sagemath script]()
+Here is what I modified in my [sagemath script](pohlig_hellman_EC_smallfactors.sage)
 
 ```python
 def pohlig_hellman_EC_smallfactor(G, PA, E, debug=True):
