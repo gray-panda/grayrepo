@@ -154,7 +154,7 @@ Opcode 25: pop -> value, TOS ror8 val (rotate right)
 ```
 
 I decoded the VM from the first image by hand  
-However, after that, I wrote a [python parser](vmparse.py) to parse these instruction bytes into text for easier processing  
+However, after that, I wrote a [python parser](parsevm.py) to parse these instruction bytes into text for easier processing  
 This is how the output looks like
 
 ![parseroutput](img/13.png)
@@ -374,14 +374,17 @@ X_1 = Z_1 + 1 , Y_1 = Y_0 + X_1
 $$
 
 As $Y_0$ = 0, we can simplify $Y_1$ to 
+
 $$\Large
 Y_1 = X_1
 $$
+
 In fact, we can generalize $Y_n$ as a summation of all $X_{n..1}$ values 
 
 $$\Large
 Y_n = \sum_{i=1}^{n} X_i
 $$
+
 Similarly, the X number only depends on Z and does not cross reference with Y
 
 $$\Large
