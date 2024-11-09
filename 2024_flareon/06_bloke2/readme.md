@@ -77,7 +77,7 @@ From data_mgr.v, the "tst" is connected to "finish"
 
 "finish" is a input line into the data_mgr module
 
-![finish1](img/08.png)
+![finish1](img/09.png)
 
 In bloke2.v, the bloke2 module uses the data_mgr module  
 It connects it's finish line to data_mgr's finish line
