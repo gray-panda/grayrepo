@@ -5,7 +5,8 @@ Challenge site @ https://flare-on11.ctfd.io/
 This was a approximately 6 weeks long reverse engineering centric CTF created by the FLARE Team
 
 It consists of a single track of 10 challenges.  
-Each challenge have to be completed before gaining access to the next.
+Each challenge have to be completed before gaining access to the next.  
+I managed to complete all 10 challenges
 
 All challenge zip files can be downloaded from the [official site](https://flare-on11.ctfd.io/)
 
