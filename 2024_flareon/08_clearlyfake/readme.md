@@ -186,6 +186,7 @@ This time, the "iex" is near the end
 Replace that with echo and run
 
 ![4b1](img/16.png)
+
 The Powershell got a little bit more readable but it is still obfuscated
 
 ![next](img/17.png)
