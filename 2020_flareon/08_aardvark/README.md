@@ -64,7 +64,7 @@ Going back to the function that checks your Windows version and looking at the f
 I noticed that a file was written to disk prior to calling that function  
 This file seems to be stored as a resource
 
-I started up Resource Hacker and checked the binary for resources
+I started up Resource Hacker or [Resource Cracker](https://www.pelock.com/products/resource-cracker) and checked the binary for resources
 
 ![rsrc](img/07.png)
 
